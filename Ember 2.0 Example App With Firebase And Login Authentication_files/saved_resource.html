@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<!-- saved from url=(0370)https://disqus.com/embed/comments/?base=default&f=programwitherik&t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&s_o=default#version=b7f46100e05d90b78b65ac991aa5a1c9 -->
+<html lang="en" dir="ltr" data-ember-extension="1" class="js no-touch localstorage sessionstorage contenteditable use-opacity-transitions"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <style>
+        .alert--warning {
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #FFE070;
+            color: #A47703;
+        }
+
+        .alert--warning a,
+        .alert--warning a:hover,
+        .alert--warning strong {
+            color: #A47703;
+            font-weight: bold;
+        }
+
+        .alert--error p,
+        .alert--warning p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        </style>
+    
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        #error {
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        
+    </style>
+
+<script src="./cb=gapi.loaded_0" async=""></script><script crossorigin="anonymous" id="bootstrap-script" data-app="lounge" src="./lounge.load.b7f46100e05d90b78b65ac991aa5a1c9.js"></script><meta http-equiv="Content-Security-Policy" content="script-src https:;"><link rel="stylesheet" href="./lounge.c1f55c45ca93f97bb7348ad6fcda5189.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lounge/main" src="./lounge.bundle.0f47ce83a0f3e6c3f7bab8a3843e4bb0.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="remote/config" src="./config.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ga" src="./ga.js"></script><style id="css_1492381926790"></style><!--<base target="_parent">--><base href="." target="_parent"><link rel="stylesheet" href="./discovery.ec9371c4ef39ecee074c2acf24d5e0e2.css"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="discovery/main" src="./discovery.bundle.c1279f7b6402d990698b3b99593a7fa9.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="fb" src="./sdk.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="gapi" src="./api.js" gapi_processed="true"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body class="serif">
+    
+
+    
+    <div id="error" class="alert--error">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"features":{},"forum":{"founder":"43460633","twitterName":"","guidelines":null,"favicon":{"permalink":"https://disqus.com/api/forums/favicons/programwitherik.jpg","cache":"//a.disquscdn.com/1492025689/images/favicon-default.png"},"disableDisqusBranding":false,"daysAlive":0,"createdAt":"2014-06-18T02:12:47.615020","category":"Tech","raw_guidelines":null,"id":"programwitherik","installCompleted":true,"pk":"3068924","channel":null,"description":"","raw_description":"","permissions":{},"name":"Program With Erik","language":"en","settings":{"supportLevel":0,"adsDRNativeEnabled":false,"colorScheme":"auto","adsVideoEnabled":false,"allowAnonPost":false,"ssoRequired":false,"unapproveLinks":false,"linkAffiliationEnabled":true,"adsProductLinksThumbnailsEnabled":false,"adsProductStoriesEnabled":false,"organicDiscoveryEnabled":true,"disable3rdPartyTrackers":false,"adsProductDisplayEnabled":false,"discoveryMax":false,"adsProductLinksEnabled":false,"hasCustomAvatar":false,"moderatorText":"","adsEnabled":false,"adsPositionTopEnabled":false,"allowMedia":true,"adultContent":false,"promotedDiscoveryEnabled":false,"allowAnonVotes":false,"adsProductVideoEnabled":false,"mustVerify":true,"discoveryThumbnailsEnabled":false,"mustVerifyEmail":true,"audienceSyncEnabled":false,"typeface":"auto","adsPositionBottomEnabled":false,"mediaembedEnabled":true,"discoveryLocked":false,"validateAllPosts":false,"adsSettingsLocked":false,"isVIP":false,"adsPositionInthreadEnabled":false},"organizationId":2287564,"url":"","daysThreadAlive":0,"avatar":{"small":{"permalink":"https://disqus.com/api/forums/avatars/programwitherik.jpg?size=32","cache":"//a.disquscdn.com/1492025689/images/noavatar32.png"},"large":{"permalink":"https://disqus.com/api/forums/avatars/programwitherik.jpg?size=92","cache":"//a.disquscdn.com/1492025689/images/noavatar92.png"}},"signedUrl":""}}</script>
+
+    
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":17,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1477737164,"posts":[{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Great tutorial! I am using the newest versions of Torii(0.8.0) and Emberfire(2.0.1), since google released the new SDK for Firebase. So now, it seems that I can get displayName from twitter, but not username(it just returns null). Display name is not very useful, because it changes all the time, may contain spaces and cannot be used as the link to the user's twitter page. Am I missing something? How can I get username (or the @handle)? Thanks!\u003c/p>","id":"2826119130","isHighlighted":false,"author":{"username":"samanthacabral","about":"","name":"Samantha Cabral","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.234707,"profileUrl":"https://disqus.com/by/samanthacabral/","url":"","reputation":1.234707,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-11-20T18:21:45","id":"82664422","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/samanthacabral.jpg","cache":"https://c.disquscdn.com/uploads/users/8266/4422/avatar32.jpg?1483445938"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/samanthacabral.jpg","cache":"https://c.disquscdn.com/uploads/users/8266/4422/avatar92.jpg?1483445938","large":{"permalink":"https://disqus.com/api/users/avatars/samanthacabral.jpg","cache":"https://c.disquscdn.com/uploads/users/8266/4422/avatar92.jpg?1483445938"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-08-08T02:48:35","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Great tutorial! I am using the newest versions of Torii(0.8.0) and Emberfire(2.0.1), since google released the new SDK for Firebase. So now, it seems that I can get displayName from twitter, but not username(it just returns null). Display name is not very useful, because it changes all the time, may contain spaces and cannot be used as the link to the user's twitter page. Am I missing something? How can I get username (or the @handle)? Thanks!","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>What does id return? I just checked this documentation. \u003ca href=\"https://disq.us/url?url=https%3A%2F%2Fwww.firebase.com%2Fdocs%2Fweb%2Fguide%2Flogin%2Ftwitter.html%3AYgiljB9ZUqQwu1--KrEqPyp17JE&amp;cuid=3068924\" rel=\"nofollow noopener\">https://www.firebase.com/do...\u003c/a>\u003cbr>The documentation still shows displayName, they must have changed that...\u003cbr>\u003c/p>","id":"2826122657","isHighlighted":false,"author":{"username":"ErikCH","about":"Developer","name":"Erik","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.328376,"profileUrl":"https://disqus.com/by/ErikCH/","url":"http://www.programwitherik.com","reputation":1.328376,"location":"Reno,NV","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.programwitherik.com&key=fMbuI9sMVklT_8YV5mZfPQ","isPrimary":true,"joinedAt":"2013-02-11T21:20:21","id":"43460633","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar32.jpg?1490282849"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849","large":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-08-08T02:52:37","parent":2826119130,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"What does id return? I just checked this documentation. https://www.firebase.com/docs/web/guide/login/twitter.html\nThe documentation still shows displayName, they must have changed that...\n","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":1,"points":0,"moderationLabels":["links"],"isEdited":true},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Yes, it did change! it now shows displayName and photoURL (no longer profileImageURL). There is a field for email - but you need to set up privacy stuff with twitter to be able to access the email, so it returns null. Username returns undefined. The new firebase documentation for twitter is not as descriptive as the one you provided: \u003ca href=\"https://disq.us/url?url=https%3A%2F%2Ffirebase.google.com%2Fdocs%2Fauth%2Fweb%2Ftwitter-login%3ALabay9gAjbqezl98pI3all45HuQ&amp;cuid=3068924\" rel=\"nofollow noopener\">https://firebase.google.com...\u003c/a>\u003c/p>","id":"2826550174","isHighlighted":false,"author":{"username":"samanthacabral","about":"","name":"Samantha Cabral","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.234707,"profileUrl":"https://disqus.com/by/samanthacabral/","url":"","reputation":1.234707,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-11-20T18:21:45","id":"82664422","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/samanthacabral.jpg","cache":"https://c.disquscdn.com/uploads/users/8266/4422/avatar32.jpg?1483445938"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/samanthacabral.jpg","cache":"https://c.disquscdn.com/uploads/users/8266/4422/avatar92.jpg?1483445938","large":{"permalink":"https://disqus.com/api/users/avatars/samanthacabral.jpg","cache":"https://c.disquscdn.com/uploads/users/8266/4422/avatar92.jpg?1483445938"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-08-08T12:35:40","parent":2826122657,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Yes, it did change! it now shows displayName and photoURL (no longer profileImageURL). There is a field for email - but you need to set up privacy stuff with twitter to be able to access the email, so it returns null. Username returns undefined. The new firebase documentation for twitter is not as descriptive as the one you provided: https://firebase.google.com/docs/auth/web/twitter-login","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":2,"points":0,"moderationLabels":["links"],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Thanks for sharing! I'll eventually get to updating this tutorial...\u003c/p>","id":"2973505640","isHighlighted":false,"author":{"username":"ErikCH","about":"Developer","name":"Erik","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.328376,"profileUrl":"https://disqus.com/by/ErikCH/","url":"http://www.programwitherik.com","reputation":1.328376,"location":"Reno,NV","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.programwitherik.com&key=fMbuI9sMVklT_8YV5mZfPQ","isPrimary":true,"joinedAt":"2013-02-11T21:20:21","id":"43460633","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar32.jpg?1490282849"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849","large":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-10-28T18:07:32","parent":2826550174,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Thanks for sharing! I'll eventually get to updating this tutorial...","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":3,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Great tutorial, thanks for making this. However, instead of using the getOrCreateUser util, have you tried customizing the Open &amp; Fetch functions right in the Torii Adapter? \u003ca href=\"https://disq.us/url?url=https%3A%2F%2Fgithub.com%2FMattMSumner%2Ftorii-fire%23torii-sessions%3AClEc_-Y6ZtSgUg8YC4GNSRq1bp0&amp;cuid=3068924\" rel=\"nofollow noopener\">https://github.com/MattMSum...\u003c/a>\u003c/p>","id":"2763895250","isHighlighted":false,"author":{"username":"disqus_hduu0i74Nr","about":"","name":"JPG","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.234211,"profileUrl":"https://disqus.com/by/disqus_hduu0i74Nr/","url":"","reputation":1.234211,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2013-12-15T03:26:54","id":"86144729","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_hduu0i74Nr.jpg","cache":"https://c.disquscdn.com/uploads/users/8614/4729/avatar32.jpg?1387078022"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_hduu0i74Nr.jpg","cache":"https://c.disquscdn.com/uploads/users/8614/4729/avatar92.jpg?1387078022","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_hduu0i74Nr.jpg","cache":"https://c.disquscdn.com/uploads/users/8614/4729/avatar92.jpg?1387078022"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-07-03T22:36:55","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Great tutorial, thanks for making this. However, instead of using the getOrCreateUser util, have you tried customizing the Open & Fetch functions right in the Torii Adapter? https://github.com/MattMSumner/torii-fire#torii-sessions","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":0,"points":0,"moderationLabels":["links"],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>I got Erik's getOrCreateUser util to work for me, after I wasn't able to get any Torii adapter code to work. I tried this (possibly not Firebase 3.0 compliant) snippet as a starting point: \u003ca href=\"http://disq.us/url?url=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F32023653%2Femberfire-authentication-and-toriifirebaseadapter%2F32079863%2332079863%3AEFIaTwGwafVX29lnTApYxL_LcaI&amp;cuid=3068924\" rel=\"nofollow noopener\">http://stackoverflow.com/qu...\u003c/a>\u003c/p>\u003cp>It would be interesting to see an up-to-date implementation of that approach!\u003c/p>","id":"2819512430","isHighlighted":false,"author":{"username":"raponte","about":"","name":"raponte","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.2363009999999999,"profileUrl":"https://disqus.com/by/raponte/","url":"","reputation":1.2363009999999999,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2016-02-12T23:40:21","id":"196339657","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/raponte.jpg","cache":"https://c.disquscdn.com/uploads/users/19633/9657/avatar32.jpg?1455320775"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/raponte.jpg","cache":"https://c.disquscdn.com/uploads/users/19633/9657/avatar92.jpg?1455320775","large":{"permalink":"https://disqus.com/api/users/avatars/raponte.jpg","cache":"https://c.disquscdn.com/uploads/users/19633/9657/avatar92.jpg?1455320775"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-08-03T21:46:48","parent":2763895250,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"I got Erik's getOrCreateUser util to work for me, after I wasn't able to get any Torii adapter code to work. I tried this (possibly not Firebase 3.0 compliant) snippet as a starting point: http://stackoverflow.com/questions/32023653/emberfire-authentication-and-toriifirebaseadapter/32079863#32079863\n\nIt would be interesting to see an up-to-date implementation of that approach!","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":1,"points":0,"moderationLabels":["links"],"isEdited":true},{"dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>Yup! That would probably be the correct way to do it by extending the Open and Fetch functions. The getOrCreateUser util was a little kludgy. i'll create another updated tutorial in the next month or two with creating my own Open and Fetch...\u003c/p>","id":"2819537830","isHighlighted":false,"author":{"username":"ErikCH","about":"Developer","name":"Erik","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.328376,"profileUrl":"https://disqus.com/by/ErikCH/","url":"http://www.programwitherik.com","reputation":1.328376,"location":"Reno,NV","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.programwitherik.com&key=fMbuI9sMVklT_8YV5mZfPQ","isPrimary":true,"joinedAt":"2013-02-11T21:20:21","id":"43460633","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar32.jpg?1490282849"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849","large":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-08-03T22:06:09","parent":2819512430,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Yup! That would probably be the correct way to do it by extending the Open and Fetch functions. The getOrCreateUser util was a little kludgy. i'll create another updated tutorial in the next month or two with creating my own Open and Fetch...","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":2,"points":1,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>It would seem that the edit-post component is never implemented anywhere in this. Or did I miss a step? Tried searching the page for a place where it was instantiated, but could find that either.\u003c/p>","id":"2736967148","isHighlighted":false,"author":{"username":"adamduro","about":"","name":"adamduro","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.232124,"profileUrl":"https://disqus.com/by/adamduro/","url":"","reputation":1.232124,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2011-12-01T23:32:22","id":"19699060","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/adamduro.jpg","cache":"https://c.disquscdn.com/uploads/users/1969/9060/avatar32.jpg?1466211988"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/adamduro.jpg","cache":"https://c.disquscdn.com/uploads/users/1969/9060/avatar92.jpg?1466211988","large":{"permalink":"https://disqus.com/api/users/avatars/adamduro.jpg","cache":"https://c.disquscdn.com/uploads/users/1969/9060/avatar92.jpg?1466211988"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-06-18T01:08:08","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"It would seem that the edit-post component is never implemented anywhere in this. Or did I miss a step? Tried searching the page for a place where it was instantiated, but could find that either.","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>I just searched and found it half way through the page. Look again ;)\u003c/p>","id":"2740708917","isHighlighted":false,"author":{"username":"ErikCH","about":"Developer","name":"Erik","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.328376,"profileUrl":"https://disqus.com/by/ErikCH/","url":"http://www.programwitherik.com","reputation":1.328376,"location":"Reno,NV","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.programwitherik.com&key=fMbuI9sMVklT_8YV5mZfPQ","isPrimary":true,"joinedAt":"2013-02-11T21:20:21","id":"43460633","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar32.jpg?1490282849"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849","large":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-06-20T15:18:24","parent":2736967148,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"I just searched and found it half way through the page. Look again ;)","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":1,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>I get this error: Cannot read property 'forEach' of undefined. Firebase.js line 6 var forEach = _ember['default'].EnumerableUtils.forEach; that's before generate all things, just firebase installed and configured, and pods set true. :(\u003c/p>","id":"2736729299","isHighlighted":false,"author":{"username":"josephpalmezano","about":"","name":"\u266b Joseph Palmezano \u266b","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.241196,"profileUrl":"https://disqus.com/by/josephpalmezano/","url":"","reputation":1.241196,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2016-06-15T20:06:41","id":"211742757","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/josephpalmezano.jpg","cache":"https://c.disquscdn.com/uploads/users/21174/2757/avatar32.jpg?1492146222"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/josephpalmezano.jpg","cache":"https://c.disquscdn.com/uploads/users/21174/2757/avatar92.jpg?1492146222","large":{"permalink":"https://disqus.com/api/users/avatars/josephpalmezano.jpg","cache":"https://c.disquscdn.com/uploads/users/21174/2757/avatar92.jpg?1492146222"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-06-17T21:32:43","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"I get this error: Cannot read property 'forEach' of undefined. Firebase.js line 6 var forEach = _ember['default'].EnumerableUtils.forEach; that's before generate all things, just firebase installed and configured, and pods set true. :(","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>hmm. I haven't been able to reproduce that. Can you give me the versions for everything. The firebase has changed some and I haven't had a chance to check.\u003c/p>","id":"2740710627","isHighlighted":false,"author":{"username":"ErikCH","about":"Developer","name":"Erik","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.328376,"profileUrl":"https://disqus.com/by/ErikCH/","url":"http://www.programwitherik.com","reputation":1.328376,"location":"Reno,NV","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.programwitherik.com&key=fMbuI9sMVklT_8YV5mZfPQ","isPrimary":true,"joinedAt":"2013-02-11T21:20:21","id":"43460633","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar32.jpg?1490282849"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849","large":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-06-20T15:19:23","parent":2736729299,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"hmm. I haven't been able to reproduce that. Can you give me the versions for everything. The firebase has changed some and I haven't had a chance to check.","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":1,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Well done Erik, very good tutorial.\u003cbr>Any plan to make a version for using Ember Simple Auth with Firebase instead of Torii?\u003c/p>","id":"2685142927","isHighlighted":false,"author":{"username":"herzzanu","about":"","name":"Sabin","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.23972,"profileUrl":"https://disqus.com/by/herzzanu/","url":"https://adtechmedia.com","reputation":1.23972,"location":"","isPrivate":false,"signedUrl":"https://disq.us/?url=https%3A%2F%2Fadtechmedia.com&key=HZIfl0K1rIPokocSAvnDjQ","isPrimary":true,"joinedAt":"2014-07-07T10:08:25","id":"113421196","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/herzzanu.jpg","cache":"https://c.disquscdn.com/uploads/users/11342/1196/avatar32.jpg?1428907589"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/herzzanu.jpg","cache":"https://c.disquscdn.com/uploads/users/11342/1196/avatar92.jpg?1428907589","large":{"permalink":"https://disqus.com/api/users/avatars/herzzanu.jpg","cache":"https://c.disquscdn.com/uploads/users/11342/1196/avatar92.jpg?1428907589"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-05-19T22:44:39","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Well done Erik, very good tutorial.\nAny plan to make a version for using Ember Simple Auth with Firebase instead of Torii?","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Thanks!\u003c/p>\u003cp>I will definitely continue in the future with another Firebase tutorial. I've already written three or four of them, so I'll probably wait a couple of months.\u003c/p>","id":"2740717842","isHighlighted":false,"author":{"username":"ErikCH","about":"Developer","name":"Erik","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.328376,"profileUrl":"https://disqus.com/by/ErikCH/","url":"http://www.programwitherik.com","reputation":1.328376,"location":"Reno,NV","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.programwitherik.com&key=fMbuI9sMVklT_8YV5mZfPQ","isPrimary":true,"joinedAt":"2013-02-11T21:20:21","id":"43460633","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar32.jpg?1490282849"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849","large":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-06-20T15:23:27","parent":2685142927,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Thanks!\n\nI will definitely continue in the future with another Firebase tutorial. I've already written three or four of them, so I'll probably wait a couple of months.","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":1,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Great tutorial Erik, thank you for your effort to keep informations updated. Just to mention: in the beginning you said: The latest beta version of Ember CLI was having issues with some of the addons so I'm using Ember CLI 1.13.13 instead of the beta.\u003c/p>\u003cp>I used:\u003cbr>version: 2.2.0-beta.6\u003cbr>node: 5.5.0\u003cbr>npm: 2.14.10\u003cbr>os: linux x64\u003c/p>\u003cp>Everything worked fine for me.\u003c/p>","id":"2511263215","isHighlighted":false,"author":{"username":"alexandre_formagio","about":"","name":"Alexandre Formagio","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.238244,"profileUrl":"https://disqus.com/by/alexandre_formagio/","url":"","reputation":1.238244,"location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"joinedAt":"2015-07-14T18:11:53","id":"165444172","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/alexandre_formagio.jpg","cache":"https://c.disquscdn.com/uploads/users/16544/4172/avatar32.jpg?1486637102"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/alexandre_formagio.jpg","cache":"https://c.disquscdn.com/uploads/users/16544/4172/avatar92.jpg?1486637102","large":{"permalink":"https://disqus.com/api/users/avatars/alexandre_formagio.jpg","cache":"https://c.disquscdn.com/uploads/users/16544/4172/avatar92.jpg?1486637102"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-02-13T08:28:13","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Great tutorial Erik, thank you for your effort to keep informations updated. Just to mention: in the beginning you said: The latest beta version of Ember CLI was having issues with some of the addons so I'm using Ember CLI 1.13.13 instead of the beta.\n\nI used:\nversion: 2.2.0-beta.6\nnode: 5.5.0\nnpm: 2.14.10\nos: linux x64\n\nEverything worked fine for me.","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Good to know, must be fixed\u003c/p>","id":"2513630540","isHighlighted":false,"author":{"username":"ErikCH","about":"Developer","name":"Erik","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.328376,"profileUrl":"https://disqus.com/by/ErikCH/","url":"http://www.programwitherik.com","reputation":1.328376,"location":"Reno,NV","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.programwitherik.com&key=fMbuI9sMVklT_8YV5mZfPQ","isPrimary":true,"joinedAt":"2013-02-11T21:20:21","id":"43460633","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar32.jpg?1490282849"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849","large":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-02-14T20:57:49","parent":2511263215,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Good to know, must be fixed","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":1,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Awesome post Erik. One minor detail: I see you are using a lot of `let` in ES6 instead of `const`, for example inside the `save` actions. You can use `const` there and I think that is a common standard to use `const` over `let`. In a loop for example you can define a variable with `const` and loop over the definition multiple times. The same goes for functions (like `save`) you call multiple times.\u003c/p>\u003cp>I learned some nice things about `mut` variables and the `features` folder. Thanks for that!\u003c/p>","id":"2450431390","isHighlighted":false,"author":{"username":"disqus_d0cuE4ELnP","about":"","name":"Adriaan","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.238322,"profileUrl":"https://disqus.com/by/disqus_d0cuE4ELnP/","url":"http://adriaan.io","reputation":1.238322,"location":"Amsterdam","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fadriaan.io&key=YeiCItBdDgtwi3iNzincWg","isPrimary":true,"joinedAt":"2014-04-28T08:18:46","id":"104915500","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_d0cuE4ELnP.jpg","cache":"https://c.disquscdn.com/uploads/users/10491/5500/avatar32.jpg?1398673731"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_d0cuE4ELnP.jpg","cache":"https://c.disquscdn.com/uploads/users/10491/5500/avatar92.jpg?1398673731","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_d0cuE4ELnP.jpg","cache":"https://c.disquscdn.com/uploads/users/10491/5500/avatar92.jpg?1398673731"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-01-10T21:22:38","parent":null,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Awesome post Erik. One minor detail: I see you are using a lot of `let` in ES6 instead of `const`, for example inside the `save` actions. You can use `const` there and I think that is a common standard to use `const` over `let`. In a loop for example you can define a variable with `const` and loop over the definition multiple times. The same goes for functions (like `save`) you call multiple times.\n\nI learned some nice things about `mut` variables and the `features` folder. Thanks for that!","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":0,"points":0,"moderationLabels":[],"isEdited":false},{"dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Thanks!\u003c/p>\u003cp>I'll have to update to use const instead. Is there anytime you wouldn't use const?\u003c/p>","id":"2451889251","isHighlighted":false,"author":{"username":"ErikCH","about":"Developer","name":"Erik","disable3rdPartyTrackers":false,"isPowerContributor":false,"isAnonymous":false,"rep":1.328376,"profileUrl":"https://disqus.com/by/ErikCH/","url":"http://www.programwitherik.com","reputation":1.328376,"location":"Reno,NV","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.programwitherik.com&key=fMbuI9sMVklT_8YV5mZfPQ","isPrimary":true,"joinedAt":"2013-02-11T21:20:21","id":"43460633","reputationLabel":"Average","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar32.jpg?1490282849"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849","large":{"permalink":"https://disqus.com/api/users/avatars/ErikCH.jpg","cache":"https://c.disquscdn.com/uploads/users/4346/633/avatar92.jpg?1490282849"}}},"media":[],"isSpam":false,"isDeletedByAuthor":false,"createdAt":"2016-01-11T16:47:39","parent":2450431390,"isApproved":true,"isDeleted":false,"isFlagged":false,"raw_message":"Thanks!\n\n\nI'll have to update to use const instead. Is there anytime you wouldn't use const?","canVote":false,"thread":"4459371193","forum":"programwitherik","depth":1,"points":0,"moderationLabels":[],"isEdited":false}],"thread":{"feed":"https://programwitherik.disqus.com/emberjs_20_example_app_with_firebase_and_login_authentication_33/latest.rss","identifiers":[],"dislikes":0,"likes":1,"message":"","id":"4459371193","createdAt":"2016-01-04T05:35:56","category":"3114830","author":"43460633","isSpam":false,"signedLink":"http://disq.us/?url=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&key=Qi710nyYMJnFcDB2wJPmTw","isDeleted":false,"hasStreaming":false,"raw_message":"","isClosed":false,"link":"http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/","slug":"emberjs_20_example_app_with_firebase_and_login_authentication_33","forum":"programwitherik","clean_title":"Ember.js 2.0 Example App With Firebase And Login Authentication","posts":17,"moderators":[43460633],"title":"Ember.js 2.0 Example App With Firebase And Login Authentication","highlightedPost":null}},"order":"popular"}</script>
+
+    
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"https://c.disquscdn.com/next/current/embed"
+}</script>
+
+        
+        <script>!function () {
+            var d = document;
+            var toH = d.head.appendChild.bind(d.head);
+
+            var v = window.location.href.match(/[#&?]version=([0-9a-f]{32})/);
+            var src = 'https://c.disquscdn.com/next/embed/lounge.load';
+            if (v)
+                src += '.' + v[1];
+            src += '.js';
+
+            var s = d.createElement('script');
+            s.crossOrigin = 'anonymous';
+            s.id = 'bootstrap-script';
+            s.setAttribute('data-app', 'lounge');
+            s.src = src;
+            toH(s);
+
+            var m = d.createElement('meta');
+            m.setAttribute('http-equiv', 'Content-Security-Policy');
+            m.setAttribute('content', "script-src https:;");
+            toH(m);
+        }();</script>
+    
+
+
+<script src="./common.bundle.f6a625ca8b85c1f2ea944c38c50ac38c.js"></script><div id="layout" data-tracking-area="layout">
+
+<div id="onboard" data-tracking-area="onboard"><div></div></div>
+
+<div id="highlighted-post" data-tracking-area="highlighted" class="highlighted-post" style="display: none;"></div>
+
+<div id="global-alert"></div>
+
+<header id="main-nav" data-tracking-area="main-nav">
+<nav class="nav nav-primary">
+<ul>
+<li class="nav-tab nav-tab--primary tab-conversation active" data-role="post-count"><a class="publisher-nav-color">
+<span class="comment-count">
+17 comments
+</span>
+
+<span class="comment-count-placeholder">
+Comments
+</span>
+</a>
+</li>
+<li class="nav-tab nav-tab--primary tab-community">
+<a href="https://disqus.com/home/forums/programwitherik/" class="publisher-nav-color" data-action="community-sidebar" data-forum="programwitherik" id="community-tab">
+<span class="community-name">
+<strong>Program With Erik</strong>
+
+</span>
+
+<strong class="community-name-placeholder">Community</strong>
+</a>
+</li>
+<li class="nav-tab nav-tab--primary dropdown user-menu" data-role="logout"><a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="dropdown-toggle" data-toggle="dropdown">
+<span class="dropdown-toggle-wrapper">
+
+<span>
+Login
+</span>
+
+</span> <span class="caret"></span>
+</a>
+<ul class="dropdown-menu">
+
+
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="auth:disqus">Disqus</a>
+</li>
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="auth:facebook">Facebook</a>
+</li>
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="auth:twitter">Twitter</a>
+</li>
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="auth:google">Google</a>
+</li>
+
+
+
+</ul>
+</li>
+<li class="nav-tab nav-tab--primary notification-menu unread" data-role="notification-menu"><a href="https://disqus.com/home/inbox/" class="notification-container" data-action="home" data-home-path="home/inbox/">
+<span class="notification-icon icon-comment" aria-hidden=""></span>
+<span class="notification-count" data-role="notification-count">1</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+
+<section id="conversation" data-role="main" data-tracking-area="main">
+<div class="nav nav-secondary" data-tracking-area="secondary-nav">
+<ul>
+<li id="recommend-button" class="nav-tab nav-tab--secondary recommend dropdown">
+<div class="thread-likes"><a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="recommend" title="Recommend this discussion" class="dropdown-toggle ">
+<span class="label label-default"><span class="recommend-icon icon-heart-empty"></span> Recommend</span>
+<span class="label label-recommended"><span class="recommend-icon icon-heart"></span> Recommended</span>
+<span class="label label-count">1</span>
+</a>
+<ul class="dropdown-menu dropdown-menu--coachmark">
+<li>
+<h2 class="coachmark__heading">Discussion Recommended!</h2>
+<p class="coachmark__description">Recommending means this is a discussion worth sharing. It gets shared to your followers' Disqus feeds, and gives the creator kudos!</p>
+<a href="https://disqus.com/home/?utm_source=disqus_embed&amp;utm_content=recommend_btn" class="btn btn-primary coachmark__button" target="_blank">
+ Find More Discussions 
+</a>
+</li>
+</ul>
+</div></li>
+<li id="thread-share-menu" class="nav-tab nav-tab--secondary dropdown share-menu hidden-sm"><a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="dropdown-toggle" data-toggle="dropdown" title="Share">
+<span class="icon-export"></span>
+<span class="label">Share</span>
+</a>
+<ul class="share-menu dropdown-menu">
+<li>
+<div class="share-menu__label">Share this discussion on</div>
+<ul>
+<li class="twitter">
+<a data-action="share:twitter" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#">Twitter</a>
+</li>
+<li class="facebook">
+<a data-action="share:facebook" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#">Facebook</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li data-role="post-sort" class="nav-tab nav-tab--secondary dropdown sorting pull-right">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="dropdown-toggle" data-toggle="dropdown">
+Sort by Best
+
+
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu pull-right">
+<li class="selected">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="sort" data-sort="popular">Best<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="sort" data-sort="desc">Newest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+
+<li>
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="sort" data-sort="asc">Oldest<i aria-hidden="true" class="icon-checkmark"></i></a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div id="posts">
+<div id="form" class="textarea-wrapper--top-level"><form class="reply">
+<div class="postbox">
+<div role="alert"></div>
+<div class="avatar">
+<span class="user">
+<img data-role="user-avatar" src="./noavatar92.7b2fde640943965cc88df0cdee365907.png" alt="Avatar">
+</span>
+</div>
+
+<div class="textarea-wrapper" data-role="textarea" dir="auto"><div><span class="placeholder">Join the discussion…</span><div class="textarea" tabindex="0" role="textbox" aria-multiline="true" contenteditable="PLAINTEXT-ONLY" data-role="editable" aria-label="Join the discussion…" style="overflow: auto; word-wrap: break-word; max-height: 350px;"><p><br></p></div><div style="display: none;"><ul class="user-mention__list">
+<li class="header user-mention__header">
+<h5>in this conversation</h5>
+</li>
+</ul>
+</div></div>
+<div data-role="drag-drop-placeholder" class="media-drag-hover" style="display: none">
+<div class="drag-text">
+⬇ Drag and drop your images here to upload them.
+</div>
+</div>
+<div class="media-preview empty" data-role="media-preview"><ul data-role="media-progress-list"></ul>
+<ul data-role="media-rich-list"></ul>
+<div class="media-expanded empty" data-role="media-preview-expanded">
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-role="media-preview-expanded-image" alt="Media preview placeholder">
+</div>
+</div>
+<div class="edit-alert" role="postbox-alert"></div>
+<div class="post-actions">
+<ul class="wysiwyg">
+<li class="wysiwyg__item" data-role="media-uploader"><a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" tabindex="-1" data-action="attach" class="attach" title="Upload Images"><span>Attach</span></a>
+<input type="file" data-role="media-upload" tabindex="-1" accept="image/*">
+</li>
+</ul>
+</div>
+</div>
+
+<div data-role="login-form"><div><section class="auth-section logged-out">
+<div class="connect">
+<h6>Log in with</h6>
+<ul data-role="login-menu" class="services login-buttons">
+
+<li class="auth-disqus">
+<button type="button" data-action="auth:disqus" title="Disqus" class="connect__button"><i class="icon-disqus"></i></button>
+</li>
+<li class="auth-facebook">
+<button type="button" data-action="auth:facebook" title="Facebook" class="connect__button"><i class="icon-facebook-circle"></i></button>
+</li>
+<li class="auth-twitter">
+<button type="button" data-action="auth:twitter" title="Twitter" class="connect__button"><i class="icon-twitter-circle"></i></button>
+</li>
+<li class="auth-google">
+<button type="button" data-action="auth:google" title="Google" class="connect__button"><i class="icon-google-plus-circle"></i></button>
+</li>
+</ul>
+</div>
+<div class="guest">
+<h6 class="guest-form-title">
+<span class="register-text"> or sign up with Disqus </span>
+<span class="guest-text"> or pick a name </span>
+</h6>
+
+<div class="help-tooltip__wrapper help-icon">
+<div id="rules" class="tooltip show help-tooltip">
+<h3 class="help-tooltip__heading">Disqus is a discussion network</h3>
+<ul class="help-tooltip__list">
+<li><span>Disqus never moderates or censors. The rules on this community are its own.</span></li>
+<li><span>Your email is safe with us. It's only used for moderation and optional notifications.</span></li>
+<li><span>Don't be a jerk or do anything illegal. Everything is easier that way.</span></li>
+</ul>
+<p class="clearfix"><a href="https://docs.disqus.com/kb/terms-and-policies/" class="btn btn-small help-tooltip__button" target="_blank">Read full terms and conditions</a></p>
+</div>
+</div>
+
+<p class="input-wrapper">
+<input dir="auto" type="text" placeholder="Name" name="display_name" id="view53_display_name" maxlength="30" class="input--text">
+</p>
+
+<div class="guest-details " data-role="guest-details">
+<p class="input-wrapper">
+<input dir="auto" type="email" placeholder="Email" name="email" id="view53_email" class="input--text">
+</p>
+
+<p class="input-wrapper">
+<input dir="auto" type="password" class="register-text input--text" placeholder="Password" name="password" id="view53_password">
+</p>
+
+<div class="acceptance-wrapper register-text">
+By signing up, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+<div class="acceptance-wrapper guest-text">
+By posting, you agree to the Disqus <a target="_blank" href="https://help.disqus.com/customer/portal/articles/1753105-basic-rules-for-disqus-powered-profiles-and-discussions">Basic Rules</a>, <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466260-terms-of-service">Terms of Service</a>, and <a target="_blank" href="https://help.disqus.com/customer/portal/articles/466259-privacy-policy">Privacy Policy</a>.
+</div>
+
+<input type="checkbox" name="author-guest" style="display:none">
+
+<div class="proceed" data-role="submit-btn-container">
+<button type="submit" class="proceed__button btn submit" aria-label="Next"><span class="icon-proceed"></span><div class="spinner"></div></button>
+</div>
+</div>
+</div>
+</section>
+
+</div></div>
+</div>
+</form></div>
+
+<button class="alert alert--realtime" style="display: none" data-role="realtime-notification">
+</button>
+
+<div id="no-posts" style="display:none"></div>
+
+<ul id="post-list" class="post-list"><li class="post" id="post-2826119130"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/samanthacabral/" class="user" data-action="profile" data-username="samanthacabral">
+<img data-role="user-avatar" data-user="82664422" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/samanthacabral/" data-action="profile" data-username="samanthacabral" data-role="username">Samantha Cabral</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2826119130" data-role="relative-time" class="time-ago" title="Sunday, August 7, 2016 7:48 PM">8 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Great tutorial! I am using the newest versions of Torii(0.8.0) and Emberfire(2.0.1), since google released the new SDK for Firebase. So now, it seems that I can get displayName from twitter, but not username(it just returns null). Display name is not very useful, because it changes all the time, may contain spaces and cannot be used as the link to the user's twitter page. Am I missing something? How can I get username (or the @handle)? Thanks!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1aqljh6" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2826119130">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2826122657"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ErikCH/" class="user" data-action="profile" data-username="ErikCH">
+<img data-role="user-avatar" data-user="43460633" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ErikCH/" data-action="profile" data-username="ErikCH" data-role="username">Erik</a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2826119130" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Samantha Cabral</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2826122657" data-role="relative-time" class="time-ago" title="Sunday, August 7, 2016 7:52 PM">8 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>What does id return? I just checked this documentation. <a href="https://disq.us/url?url=https%3A%2F%2Fwww.firebase.com%2Fdocs%2Fweb%2Fguide%2Flogin%2Ftwitter.html%3AYgiljB9ZUqQwu1--KrEqPyp17JE&amp;cuid=3068924" rel="nofollow noopener">https://www.firebase.com/do...</a><br>The documentation still shows displayName, they must have changed that...<br></p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1aqlm75" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2826122657">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2826550174"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/samanthacabral/" class="user" data-action="profile" data-username="samanthacabral">
+<img data-role="user-avatar" data-user="82664422" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/samanthacabral/" data-action="profile" data-username="samanthacabral" data-role="username">Samantha Cabral</a></span>
+
+<span><a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2826122657" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Erik</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2826550174" data-role="relative-time" class="time-ago" title="Monday, August 8, 2016 5:35 AM">8 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Yes, it did change! it now shows displayName and photoURL (no longer profileImageURL). There is a field for email - but you need to set up privacy stuff with twitter to be able to access the email, so it returns null. Username returns undefined. The new firebase documentation for twitter is not as descriptive as the one you provided: <a href="https://disq.us/url?url=https%3A%2F%2Ffirebase.google.com%2Fdocs%2Fauth%2Fweb%2Ftwitter-login%3ALabay9gAjbqezl98pI3all45HuQ&amp;cuid=3068924" rel="nofollow noopener">https://firebase.google.com...</a></p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1aqus2m" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2826550174">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2973505640"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ErikCH/" class="user" data-action="profile" data-username="ErikCH">
+<img data-role="user-avatar" data-user="43460633" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ErikCH/" data-action="profile" data-username="ErikCH" data-role="username">Erik</a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2826550174" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Samantha Cabral</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2973505640" data-role="relative-time" class="time-ago" title="Friday, October 28, 2016 11:07 AM">6 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Thanks for sharing! I'll eventually get to updating this tutorial...</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1d6cjmw" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2973505640">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2763895250"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_hduu0i74Nr/" class="user" data-action="profile" data-username="disqus_hduu0i74Nr">
+<img data-role="user-avatar" data-user="86144729" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_hduu0i74Nr/" data-action="profile" data-username="disqus_hduu0i74Nr" data-role="username">JPG</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2763895250" data-role="relative-time" class="time-ago" title="Sunday, July 3, 2016 3:36 PM">9 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Great tutorial, thanks for making this. However, instead of using the getOrCreateUser util, have you tried customizing the Open &amp; Fetch functions right in the Torii Adapter? <a href="https://disq.us/url?url=https%3A%2F%2Fgithub.com%2FMattMSumner%2Ftorii-fire%23torii-sessions%3AClEc_-Y6ZtSgUg8YC4GNSRq1bp0&amp;cuid=3068924" rel="nofollow noopener">https://github.com/MattMSum...</a></p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/19pjv82" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2763895250">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2819512430"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/raponte/" class="user" data-action="profile" data-username="raponte">
+<img data-role="user-avatar" data-user="196339657" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/raponte/" data-action="profile" data-username="raponte" data-role="username">raponte</a></span>
+
+<span><a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2763895250" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> JPG</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2819512430" data-role="relative-time" class="time-ago" title="Wednesday, August 3, 2016 2:46 PM">8 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>I got Erik's getOrCreateUser util to work for me, after I wasn't able to get any Torii adapter code to work. I tried this (possibly not Firebase 3.0 compliant) snippet as a starting point: <a href="http://disq.us/url?url=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F32023653%2Femberfire-authentication-and-toriifirebaseadapter%2F32079863%2332079863%3AEFIaTwGwafVX29lnTApYxL_LcaI&amp;cuid=3068924" rel="nofollow noopener">http://stackoverflow.com/qu...</a></p><p>It would be interesting to see an up-to-date implementation of that approach!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1amnxpq" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2819512430">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2819537830"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ErikCH/" class="user" data-action="profile" data-username="ErikCH">
+<img data-role="user-avatar" data-user="43460633" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ErikCH/" data-action="profile" data-username="ErikCH" data-role="username">Erik</a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2819512430" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> raponte</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2819537830" data-role="relative-time" class="time-ago" title="Wednesday, August 3, 2016 3:06 PM">8 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Yup! That would probably be the correct way to do it by extending the Open and Fetch functions. The getOrCreateUser util was a little kludgy. i'll create another updated tutorial in the next month or two with creating my own Open and Fetch...</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-1" data-action="upvote" title="">
+
+<span class="updatable count" data-role="likes">1</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/1amohba" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2819537830">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2736967148"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/adamduro/" class="user" data-action="profile" data-username="adamduro">
+<img data-role="user-avatar" data-user="19699060" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/adamduro/" data-action="profile" data-username="adamduro" data-role="username">adamduro</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2736967148" data-role="relative-time" class="time-ago" title="Friday, June 17, 2016 6:08 PM">10 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>It would seem that the edit-post component is never implemented anywhere in this. Or did I miss a step? Tried searching the page for a place where it was instantiated, but could find that either.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/199ipd8" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2736967148">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2740708917"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ErikCH/" class="user" data-action="profile" data-username="ErikCH">
+<img data-role="user-avatar" data-user="43460633" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ErikCH/" data-action="profile" data-username="ErikCH" data-role="username">Erik</a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2736967148" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> adamduro</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2740708917" data-role="relative-time" class="time-ago" title="Monday, June 20, 2016 8:18 AM">10 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>I just searched and found it half way through the page. Look again ;)</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/19bqwj9" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2740708917">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2736729299"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/josephpalmezano/" class="user" data-action="profile" data-username="josephpalmezano">
+<img data-role="user-avatar" data-user="211742757" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/josephpalmezano/" data-action="profile" data-username="josephpalmezano" data-role="username">♫ Joseph Palmezano ♫</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2736729299" data-role="relative-time" class="time-ago" title="Friday, June 17, 2016 2:32 PM">10 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>I get this error: Cannot read property 'forEach' of undefined. Firebase.js line 6 var forEach = _ember['default'].EnumerableUtils.forEach; that's before generate all things, just firebase installed and configured, and pods set true. :(</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/199dlub" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2736729299">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2740710627"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ErikCH/" class="user" data-action="profile" data-username="ErikCH">
+<img data-role="user-avatar" data-user="43460633" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ErikCH/" data-action="profile" data-username="ErikCH" data-role="username">Erik</a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2736729299" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> ♫ Joseph Palmezano ♫</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2740710627" data-role="relative-time" class="time-ago" title="Monday, June 20, 2016 8:19 AM">10 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>hmm. I haven't been able to reproduce that. Can you give me the versions for everything. The firebase has changed some and I haven't had a chance to check.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/19bqxur" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2740710627">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2685142927"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/herzzanu/" class="user" data-action="profile" data-username="herzzanu">
+<img data-role="user-avatar" data-user="113421196" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/herzzanu/" data-action="profile" data-username="herzzanu" data-role="username">Sabin</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2685142927" data-role="relative-time" class="time-ago" title="Thursday, May 19, 2016 3:44 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Well done Erik, very good tutorial.<br>Any plan to make a version for using Ember Simple Auth with Firebase instead of Torii?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/18enxjj" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2685142927">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2740717842"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ErikCH/" class="user" data-action="profile" data-username="ErikCH">
+<img data-role="user-avatar" data-user="43460633" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ErikCH/" data-action="profile" data-username="ErikCH" data-role="username">Erik</a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2685142927" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Sabin</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2740717842" data-role="relative-time" class="time-ago" title="Monday, June 20, 2016 8:23 AM">10 months ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Thanks!</p><p>I will definitely continue in the future with another Firebase tutorial. I've already written three or four of them, so I'll probably wait a couple of months.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/19br3f6" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2740717842">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2511263215"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/alexandre_formagio/" class="user" data-action="profile" data-username="alexandre_formagio">
+<img data-role="user-avatar" data-user="165444172" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/alexandre_formagio/" data-action="profile" data-username="alexandre_formagio" data-role="username">Alexandre Formagio</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2511263215" data-role="relative-time" class="time-ago" title="Saturday, February 13, 2016 12:28 AM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Great tutorial Erik, thank you for your effort to keep informations updated. Just to mention: in the beginning you said: The latest beta version of Ember CLI was having issues with some of the addons so I'm using Ember CLI 1.13.13 instead of the beta.</p><p>I used:<br>version: 2.2.0-beta.6<br>node: 5.5.0<br>npm: 2.14.10<br>os: linux x64</p><p>Everything worked fine for me.</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/15j533j" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2511263215">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2513630540"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ErikCH/" class="user" data-action="profile" data-username="ErikCH">
+<img data-role="user-avatar" data-user="43460633" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ErikCH/" data-action="profile" data-username="ErikCH" data-role="username">Erik</a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2511263215" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Alexandre Formagio</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2513630540" data-role="relative-time" class="time-ago" title="Sunday, February 14, 2016 12:57 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Good to know, must be fixed</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/15kjtqk" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2513630540">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li><li class="post" id="post-2450431390"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/disqus_d0cuE4ELnP/" class="user" data-action="profile" data-username="disqus_d0cuE4ELnP">
+<img data-role="user-avatar" data-user="104915500" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/disqus_d0cuE4ELnP/" data-action="profile" data-username="disqus_d0cuE4ELnP" data-role="username">Adriaan</a></span>
+
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2450431390" data-role="relative-time" class="time-ago" title="Sunday, January 10, 2016 1:22 PM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Awesome post Erik. One minor detail: I see you are using a lot of `let` in ES6 instead of `const`, for example inside the `save` actions. You can use `const` there and I think that is a common standard to use `const` over `let`. In a loop for example you can define a variable with `const` and loop over the definition multiple times. The same goes for functions (like `save`) you call multiple times.</p><p>I learned some nice things about `mut` variables and the `features` folder. Thanks for that!</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/14ix8ym" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2450431390">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"><li class="post" id="post-2451889251"><div role="alert"></div>
+<div data-role="post-content" class="post-content">
+<ul class="post-menu dropdown" data-role="menu">
+<li class="collapse">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Collapse"><span>−</span></a>
+</li>
+<li class="expand">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="collapse" title="Expand"><span>+</span></a>
+</li>
+
+<li class="" role="menu">
+<a class="dropdown-toggle" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="flag" data-role="flag" title="Flag as inappropriate">
+<i aria-hidden="true" class="icon icon-flag"></i>
+</a>
+</li>
+</ul>
+
+<div class="indicator"></div>
+
+<div class="avatar hovercard">
+<a href="https://disqus.com/by/ErikCH/" class="user" data-action="profile" data-username="ErikCH">
+<img data-role="user-avatar" data-user="43460633" src="./noavatar92.png" alt="Avatar">
+</a>
+</div>
+<div class="post-body">
+<header class="comment__header">
+<span class="post-byline">
+<span class="author publisher-anchor-color"><a href="https://disqus.com/by/ErikCH/" data-action="profile" data-username="ErikCH" data-role="username">Erik</a></span>
+<span class="badge moderator">Mod</span>
+
+<span><a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2450431390" class="parent-link" data-role="parent-link"><i aria-hidden="true" class="icon-forward" title="in reply to"></i> Adriaan</a></span>
+</span>
+
+<span class="post-meta">
+<span class="bullet time-ago-bullet" aria-hidden="true">•</span>
+
+<a href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/#comment-2451889251" data-role="relative-time" class="time-ago" title="Monday, January 11, 2016 8:47 AM">a year ago</a>
+</span>
+
+</header>
+
+<div class="post-body-inner">
+<div class="post-message-container" data-role="message-container">
+<div class="publisher-anchor-color" data-role="message-content">
+<div class="post-message " data-role="message" dir="auto">
+<p>Thanks!</p><p>I'll have to update to use const instead. Is there anytime you wouldn't use const?</p>
+</div>
+
+<span class="post-media"><ul data-role="post-media-list"></ul></span>
+</div>
+</div>
+<a class="see-more hidden" title="see more" data-action="see-more">see more</a>
+</div>
+
+<footer class="comment__footer"><menu class="comment-footer__menu">
+<li class="voting" data-role="voting">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="vote-up  count-0" data-action="upvote" title="Vote up">
+
+<span class="updatable count" data-role="likes">0</span>
+<span class="control"><i aria-hidden="true" class="icon icon-arrow-2"></i></span>
+</a>
+<span role="button" class="vote-down  count-0" data-action="downvote" title="Vote down">
+
+<span class="control"><i aria-hidden="true" class="icon icon-arrow"></i></span>
+</span>
+</li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="reply" data-role="reply-link">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="reply">
+<span class="text">Reply</span></a></li>
+<li class="bullet" aria-hidden="true">•</li>
+
+
+<li class="comment__share">
+<a class="toggle"><span class="text">Share ›</span></a>
+<ul class="comment-share__buttons">
+<li class="twitter">
+<button class="share__button" data-action="share:twitter">Twitter</button>
+</li>
+<li class="facebook">
+<button class="share__button" data-action="share:facebook">Facebook</button>
+</li>
+<li class="link">
+<input class="share__button" value="http://disq.us/p/14jshur" name="Link" title="Click to copy post link" data-action="copy-link" readonly="">
+</li>
+</ul>
+</li>
+
+<li class="realtime" data-role="realtime-notification:2451889251">
+<span style="display:none;" class="realtime-replies"></span>
+<a style="display:none;" href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" class="realtime-button"></a>
+</li>
+
+</menu>
+</footer>
+</div>
+
+<div data-role="blacklist-form"></div>
+<div class="reply-form-container" data-role="reply-form"></div>
+</div>
+
+<ul data-role="children" class="children"></ul>
+
+</li></ul>
+
+</li></ul>
+
+<div class="load-more" data-role="more" style="display:none">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" data-action="more-posts" class="btn load-more__button">Load more comments</a>
+</div>
+</div>
+
+</section>
+
+<div id="placement-bottom" data-tracking-area="discovery-south"><div class="post-list" style="height: auto; visibility: visible;"><div style="display: block; width: 100%;"><div id="discovery-main-c385" class="discovery-main">
+
+<section id="col-organic-c403" class="col-organic">
+<header class="discovery-col-header">
+<h2>Also on <strong>Program With Erik</strong>
+</h2>
+</header>
+<ul class="discovery-posts" data-role="discovery-posts"><li class="discovery-post post-0" id="discovery-link-organic-4540816175">
+<a href="http://disq.us/url?url=http%3A%2F%2Fwww.programwitherik.com%2Fbook%2F%3AgFNB4_fYnZRuW4_XTJp2OPYy77M&amp;imp=25fc0uc2in8n8p&amp;prev_imp=25f63kj2hr6pvp&amp;forum_id=3068924&amp;forum=programwitherik&amp;thread_id=4459371193&amp;thread=4540816175&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=4540816175" class="publisher-anchor-color">
+
+<header class="discovery-post-header">
+<h3 title="Ember.js Cookbook">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Ember.js Cookbook
+</span>
+</h3>
+
+<ul class="meta">
+<li class="comments">
+1 comment
+</li>
+<li class="time">a year ago</li>
+</ul>
+</header>
+
+</a><a href="http://disq.us/url?url=http%3A%2F%2Fwww.programwitherik.com%2Fbook%2F%3AgFNB4_fYnZRuW4_XTJp2OPYy77M&amp;imp=25fc0uc2in8n8p&amp;prev_imp=25f63kj2hr6pvp&amp;forum_id=3068924&amp;forum=programwitherik&amp;thread_id=4459371193&amp;thread=4540816175&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=4540816175" class="top-comment" data-role="discovery-top-comment">
+<img data-src="https://c.disquscdn.com/uploads/users/19554/6639/avatar92.jpg?1454871566" alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">Garibaldy cramer</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">I'm very interested in your cookbook, when it will be available ?</span></p>
+</a>
+
+</li>
+<li class="discovery-post post-1" id="discovery-link-organic-4421438223">
+<a href="http://disq.us/url?url=http%3A%2F%2Fwww.programwitherik.com%2Flearning-react-and-node-with-azat-mardan%2F%3ATeAU-QA-TEi8SomgRvnCnXj_PSw&amp;imp=25fc0uc2in8n8p&amp;prev_imp=25f63kj2hr6pvp&amp;forum_id=3068924&amp;forum=programwitherik&amp;thread_id=4459371193&amp;thread=4421438223&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=4421438223" class="publisher-anchor-color">
+
+<header class="discovery-post-header">
+<h3 title="Learning React And Node With Azat Mardan">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Learning React And Node With Azat Mardan
+</span>
+</h3>
+
+<ul class="meta">
+<li class="comments">
+3 comments
+</li>
+<li class="time">a year ago</li>
+</ul>
+</header>
+
+</a><a href="http://disq.us/url?url=http%3A%2F%2Fwww.programwitherik.com%2Flearning-react-and-node-with-azat-mardan%2F%3ATeAU-QA-TEi8SomgRvnCnXj_PSw&amp;imp=25fc0uc2in8n8p&amp;prev_imp=25f63kj2hr6pvp&amp;forum_id=3068924&amp;forum=programwitherik&amp;thread_id=4459371193&amp;thread=4421438223&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=4421438223" class="top-comment" data-role="discovery-top-comment">
+<img data-src="https://c.disquscdn.com/uploads/users/10077/3607/avatar92.jpg?1468390046" alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">Laurent Knauss</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">great podcast. I have read all the books of azat that is how i learned express.js and node.js.</span></p>
+</a>
+
+</li>
+<li class="discovery-post post-2" id="discovery-link-organic-4827520185">
+<a href="http://disq.us/url?url=http%3A%2F%2Fwww.programwitherik.com%2Fsite-update-may-2016%2F%3AVqO5kN47IE-UUbHNYMKovLnwSqI&amp;imp=25fc0uc2in8n8p&amp;prev_imp=25f63kj2hr6pvp&amp;forum_id=3068924&amp;forum=programwitherik&amp;thread_id=4459371193&amp;thread=4827520185&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=4827520185" class="publisher-anchor-color">
+
+<header class="discovery-post-header">
+<h3 title="Site Update - May 2016">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Site Update - May 2016
+</span>
+</h3>
+
+<ul class="meta">
+<li class="comments">
+3 comments
+</li>
+<li class="time">a year ago</li>
+</ul>
+</header>
+
+</a><a href="http://disq.us/url?url=http%3A%2F%2Fwww.programwitherik.com%2Fsite-update-may-2016%2F%3AVqO5kN47IE-UUbHNYMKovLnwSqI&amp;imp=25fc0uc2in8n8p&amp;prev_imp=25f63kj2hr6pvp&amp;forum_id=3068924&amp;forum=programwitherik&amp;thread_id=4459371193&amp;thread=4827520185&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=4827520185" class="top-comment" data-role="discovery-top-comment">
+<img data-src="https://c.disquscdn.com/uploads/users/12016/8780/avatar92.jpg?1440607599" alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">Chris Salvi</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3"> I love your book and blog and youtube videos. I really hope you continue being an excellent educator of ember.js and its many facets. Thanks for …</span></p>
+</a>
+
+</li>
+<li class="discovery-post post-3" id="discovery-link-organic-5468974847">
+<a href="http://disq.us/url?url=http%3A%2F%2Fwww.programwitherik.com%2Fsetting-aurelia-js-with-webpack-tutorial%2F%3AIhb7jaglOX93ntGp8A8JC9fGkXE&amp;imp=25fc0uc2in8n8p&amp;prev_imp=25f63kj2hr6pvp&amp;forum_id=3068924&amp;forum=programwitherik&amp;thread_id=4459371193&amp;thread=5468974847&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=5468974847" class="publisher-anchor-color">
+
+<header class="discovery-post-header">
+<h3 title="Setting Aurelia.js With Webpack Tutorial">
+<span data-role="discovery-thread-title" class="title line-truncate" data-line-truncate="2">
+Setting Aurelia.js With Webpack Tutorial
+</span>
+</h3>
+
+<ul class="meta">
+<li class="comments">
+3 comments
+</li>
+<li class="time">3 months ago</li>
+</ul>
+</header>
+
+</a><a href="http://disq.us/url?url=http%3A%2F%2Fwww.programwitherik.com%2Fsetting-aurelia-js-with-webpack-tutorial%2F%3AIhb7jaglOX93ntGp8A8JC9fGkXE&amp;imp=25fc0uc2in8n8p&amp;prev_imp=25f63kj2hr6pvp&amp;forum_id=3068924&amp;forum=programwitherik&amp;thread_id=4459371193&amp;thread=5468974847&amp;zone=thread&amp;area=bottom&amp;object_type=thread&amp;object_id=5468974847" class="top-comment" data-role="discovery-top-comment">
+<img data-src="https://c.disquscdn.com/uploads/users/18774/1955/avatar92.jpg?1489061601" alt="Avatar" data-role="discovery-avatar">
+<p><span class="user" data-role="discovery-top-comment-author">the front-end guy</span> — <span data-role="discovery-top-comment-snippet" class="line-truncate" data-line-truncate="3">I've had v2, that was the issue</span></p>
+</a>
+
+</li>
+</ul>
+</section>
+
+</div>
+</div></div></div>
+
+<div id="footer" data-tracking-area="footer" class="disqus-footer__wrapper">
+<ul class="disqus-footer">
+<li class="disqus-footer__logo"><a href="https://disqus.com/" rel="nofollow" title="Powered by Disqus" class="disqus-footer__link">Powered by Disqus</a></li>
+<li id="thread-subscribe-button" class="email disqus-footer__item"> 
+<div class="default">
+<a href="https://disqus.com/embed/comments/?base=default&amp;f=programwitherik&amp;t_u=http%3A%2F%2Fwww.programwitherik.com%2Femberjs_2-0_example_app_with_firebase%2F&amp;t_d=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;t_t=Ember.js%202.0%20Example%20App%20With%20Firebase%20And%20Login%20Authentication&amp;s_o=default#" rel="nofollow" data-action="subscribe" title="Subscribe and get email updates from this discussion" class="disqus-footer__link"><i aria-hidden="true" class="icon icon-mail"></i><span class="clip">Subscribe</span> <i aria-hidden="true" class="icon icon-checkmark"></i></a>
+</div>
+<div class="form">
+<div class="input-wrapper"><input id="thread-subscribe-email" type="email" placeholder="yourname@email.com" class="disqus-footer__input input--text"></div>
+</div>
+</li>
+<li class="install disqus-footer__item">
+<a href="https://publishers.disqus.com/engage?utm_source=programwitherik&amp;utm_medium=Disqus-Footer" rel="nofollow" target="_blank" class="disqus-footer__link">
+<i aria-hidden="true" class="icon icon-disqus"></i>
+<span class="clip hidden-sm">Add Disqus to your site</span>
+<span class="clip visible-sm hidden-xs">Add Disqus</span>
+<span class="clip visible-xs">Add</span>
+</a>
+</li>
+<li class="privacy disqus-footer__item">
+<a href="https://help.disqus.com/customer/portal/articles/1657951?utm_source=disqus&amp;utm_medium=embed-footer&amp;utm_content=privacy-btn" rel="nofollow" target="_blank" class="disqus-footer__link">
+<i aria-hidden="true" class="icon icon-lock"></i>
+<span class="clip">Privacy</span>
+</a>
+</li>
+</ul>
+</div>
+</div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./_dMxoUH0Bax.html" style="border: none;"></iframe></div></div></div><iframe style="position: absolute; width: 1px; height: 1px; left: -9999px; display: none;" aria-hidden="true" id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" src="./iframe.html"></iframe><img src="./tpid=c5eshn2o1asojic" style="display: none;"><img src="./23096" style="display: none;"><img src="./saved_resource(1)" style="display: none;"><iframe src="./sync.html" style="display: none;"></iframe></body></html>

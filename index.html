@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/ -->
+<html data-ember-extension="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="google-site-verification" content="Qo4ShtmI_RknFNY5IRgearkImI9nbXbBA8WV99Ljw38">
+	<meta name="msvalidate.01" content="C8E56ADE2777C88C438B05C37891EC65">
+
+	<title>Ember 2.0 Example App With Firebase And Login Authentication</title>
+	
+	<meta name="keywords" content="Firebase,authentication,Getting Started,Blog,">
+
+	    <meta name="description" content="I&#39;ve written a lot of tutorials with Ember.js and Firebase. I&#39;ve written about deploying your Ember application, using Simple Login, and creating a blog. It was a lot of material. Ember has a six week release cycle so things move fast. With that said some of my previous tutorials">
+	
+
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="stylesheet" href="./Ember 2.0 Example App With Firebase And Login Authentication_files/normalize.css" type="text/css" media="all">
+	
+	<link rel="stylesheet" href="./Ember 2.0 Example App With Firebase And Login Authentication_files/main.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="./Ember 2.0 Example App With Firebase And Login Authentication_files/widget.css" type="text/css" media="all">
+
+	<link rel="stylesheet" href="./Ember 2.0 Example App With Firebase And Login Authentication_files/animate.css" type="text/css" media="all">
+	
+	<link rel="stylesheet" href="./Ember 2.0 Example App With Firebase And Login Authentication_files/prism.css" type="text/css" media="all">
+	
+	<link rel="icon" type="image/png" href="http://www.programwitherik.com/assets/css/favicon-32x32.png?v=7d5a94c12f" sizes="32x32">
+
+	<link rel="canonical" href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/amp/">
+    
+    <meta property="og:site_name" content="Program With Erik">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ember 2.0 Example App With Firebase And Login Authentication">
+    <meta property="og:description" content="I&#39;ve written a lot of tutorials with Ember.js and Firebase. I&#39;ve written about deploying your Ember application, using Simple Login, and creating a blog. It was a lot of material. Ember has a six week release cycle so things move fast. With that said some of my previous tutorials">
+    <meta property="og:url" content="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/">
+    <meta property="og:image" content="http://www.programwitherik.com/content/images/2016/01/tutorial2-2.jpg">
+    <meta property="article:published_time" content="2016-01-04T01:34:00.000Z">
+    <meta property="article:modified_time" content="2016-01-12T21:18:33.000Z">
+    <meta property="article:tag" content="Firebase">
+    <meta property="article:tag" content="authentication">
+    <meta property="article:tag" content="Getting Started">
+    <meta property="article:tag" content="Blog">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ember 2.0 Example App With Firebase And Login Authentication">
+    <meta name="twitter:description" content="I&#39;ve written a lot of tutorials with Ember.js and Firebase. I&#39;ve written about deploying your Ember application, using Simple Login, and creating a blog. It was a lot of material. Ember has a six week release cycle so things move fast. With that said some of my previous tutorials">
+    <meta name="twitter:url" content="http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/">
+    <meta name="twitter:image" content="http://www.programwitherik.com/content/images/2016/01/tutorial2-2.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Erik Hanchett">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Firebase, authentication, Getting Started, Blog">
+    <meta property="og:image:width" content="450">
+    <meta property="og:image:height" content="270">
+    
+    <script async="" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/analytics.js"></script><script id="twitter-wjs" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/widgets.js"></script><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Program With Erik",
+        "logo": "http://www.programwitherik.com/content/images/2015/02/eriksmall3-1.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Erik Hanchett",
+        "image": {
+            "@type": "ImageObject",
+            "url": "http://www.programwitherik.com/content/images/2015/02/eriksmall.jpg",
+            "width": 150,
+            "height": 192
+        },
+        "url": "http://www.programwitherik.com/author/erik-hanchett/",
+        "sameAs": [
+            "http://www.programwitherik.com"
+        ],
+        "description": "My goal is to share information to you about best development practices, tutorials and interesting new technologies.\n\n"
+    },
+    "headline": "Ember 2.0 Example App With Firebase And Login Authentication",
+    "url": "http://www.programwitherik.com/emberjs_2-0_example_app_with_firebase/",
+    "datePublished": "2016-01-04T01:34:00.000Z",
+    "dateModified": "2016-01-12T21:18:33.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://www.programwitherik.com/content/images/2016/01/tutorial2-2.jpg",
+        "width": 450,
+        "height": 270
+    },
+    "keywords": "Firebase, authentication, Getting Started, Blog",
+    "description": "I&#x27;ve written a lot of tutorials with Ember.js and Firebase. I&#x27;ve written about deploying your Ember application, using Simple Login, and creating a blog. It was a lot of material. Ember has a six week release cycle so things move fast. With that said some of my previous tutorials",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://www.programwitherik.com"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Program With Erik" href="http://www.programwitherik.com/rss/">
+<script type="text/javascript" async="" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/embed.js"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.c1f55c45ca93f97bb7348ad6fcda5189.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.f6a625ca8b85c1f2ea944c38c50ac38c.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.0f47ce83a0f3e6c3f7bab8a3843e4bb0.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><script type="text/javascript" charset="utf-8" async="" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/button.80ba267f37d7093ec36703643939b173.js"></script><script src="./Ember 2.0 Example App With Firebase And Login Authentication_files/alfie.f51946af45e0b561c60f768335c9eb79.js" async="" charset="UTF-8"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="674d3d92-3a9f-4620-99f6-ff856d18423d/service" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/service.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="13359558-e447-43f3-a3cd-aa61c0b91c02/service" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/service(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="8dc42610-ae42-4164-90b1-573478b46574/service" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/service(2).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="a25489e9-848c-4356-97ff-161b0852c509/service" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/service(3).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="9e8a4d2a-6f8c-415e-851b-bdfe4c01d5c1/service" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/service(4).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="408190b5-e369-48af-8e31-afb7380ecd66/service" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/service(5).js"></script><link type="text/css" rel="stylesheet" href="./Ember 2.0 Example App With Firebase And Login Authentication_files/sumome-scrollbox-popup.css"><style>@-webkit-keyframes insQ_100 {  from {  outline: 1px solid transparent  } to {  outline: 0px solid transparent }  }
+#menufication-top { animation-duration: 0.001s; animation-name: insQ_100; -webkit-animation-duration: 0.001s; -webkit-animation-name: insQ_100;  } </style><link type="text/css" rel="stylesheet" href="./Ember 2.0 Example App With Firebase And Login Authentication_files/sme-popup.css"><link type="text/css" rel="stylesheet" href="./Ember 2.0 Example App With Firebase And Login Authentication_files/sumome-share-client.css"><link type="text/css" rel="stylesheet" href="./Ember 2.0 Example App With Firebase And Login Authentication_files/sumome-smartbar-popup.css"></head>
+<body class="post-template tag-firebase tag-authentication tag-getting-started tag-blog" style="">
+	
+	<div class="sidebar" role="aside">
+		<header class="header">
+			
+			<a href="http://www.programwitherik.com/">
+				<img id="blog" class="logo" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/eriksmall3-1.png">
+			</a>
+			<h3 class="title"><a href="http://www.programwitherik.com/">Program With Erik</a></h3>
+
+			<h4><a href="http://www.programwitherik.com/about">About</a></h4>
+			<h4><a href="http://www.programwitherik.com/">Blog</a></h4>
+			<div class="separator"></div>
+			<p class="description">This site is my tutorials, rantings and musings on software development, with a focus on JavaScript, Ember.js and Node.js.</p>
+			<div class="social-icons">
+				<a href="https://github.com/ErikCH" class="icon icon-github" target="_blank"></a>
+				<a href="https://plus.google.com/+ErikHanchett?rel=author" class="icon icon-gplus" target="_blank"></a>
+				<a href="https://twitter.com/ErikCH" class="icon icon-twitter" target="_blank"></a>
+				<a href="http://www.programwitherik.com/rss" class="icon-rss"></a>
+			</div>
+			
+	</header></div>	
+	
+	
+<div id="sbr">
+</div>	
+
+	<div class="content">
+		<article class="post tag-firebase tag-authentication tag-getting-started tag-blog sumome-article" style="position: relative; padding-right: 70px;"><div class="sumome-share-client-wrapper sumome-share-client-wrapper-right-sidebar sumome-share-client-counts sumome-share-client-light sumome-share-client-medium" style="top: 130px; right: 10px;"><div data-sumome-share-pos="ra" class="sumome-share-client sumome-share-client-right-sidebar-article sumome-share-client-counts sumome-share-client-light sumome-share-client-medium sumome-share-client-rounded"><div class="sumome-share-client-animated sumome-share-client-share sumome-share-client-share-share sumome-share-client-count" data-sumome-share="share" style="background: rgb(255, 255, 255); color: black;"><span style="bottom: auto; top: 11px;"><strong>30</strong><br>Shares</span></div><a title="Facebook" class="sumome-share-client-animated sumome-share-client-share sumome-share-client-count" data-sumome-share="facebook" href="javascript:void(0);" style="background: rgb(59, 89, 152); color: rgb(255, 255, 255);"><img src="./Ember 2.0 Example App With Firebase And Login Authentication_files/facebook-white-60.png" alt="Facebook"><span>9</span></a><a title="Google+" class="sumome-share-client-animated sumome-share-client-share sumome-share-client-count" data-sumome-share="googleplus" href="javascript:void(0);" style="background: rgb(221, 75, 57); color: rgb(255, 255, 255);"><img src="./Ember 2.0 Example App With Firebase And Login Authentication_files/googleplus-white-60.png" alt="Google+"><span>3</span></a><a title="Twitter" class="sumome-share-client-animated sumome-share-client-share" data-sumome-share="twitter" href="javascript:void(0);" style="background: rgb(0, 172, 237); color: rgb(255, 255, 255);"><img src="./Ember 2.0 Example App With Firebase And Login Authentication_files/twitter-white-60.png" alt="Twitter"></a><a title="SumoMe" class="sumome-share-client-animated sumome-share-client-share" data-sumome-share="sumome" href="javascript:void(0);" style="background: rgb(15, 82, 186); color: rgb(255, 255, 255);"><img src="./Ember 2.0 Example App With Firebase And Login Authentication_files/sumome-white-60.png" alt="SumoMe"></a></div></div>
+
+	<span class="post-meta"><time datetime="2016-01-04">04 Jan 2016</time> on <a href="http://www.programwitherik.com/tag/firebase/">Firebase</a> | <a href="http://www.programwitherik.com/tag/authentication/">authentication</a> | <a href="http://www.programwitherik.com/tag/getting-started/">Getting Started</a> | <a href="http://www.programwitherik.com/tag/blog/">Blog</a></span>
+
+	<h1 class="post-title">Ember.js 2.0 Example App With Firebase And Login Authentication</h1>
+
+	<section class="post-content">
+		<p><img src="./Ember 2.0 Example App With Firebase And Login Authentication_files/tutorial2-1.jpg" alt=""></p>
+
+<p>I've written a lot of tutorials with Ember.js and <a href="http://www.firebase.com/" target="_blank">Firebase</a>. I've written about <a href="http://www.programwitherik.com/deploy-your-ember-application-to-firebase/">deploying your Ember application</a>, using <a href="http://www.programwitherik.com/ember-cli-with-firebase-simple-login/">Simple Login</a>, and creating a <a href="http://www.programwitherik.com/blog-tutorial-with-ember-js/">blog</a>. It was a lot of material.</p>
+
+<p>Ember has a six week release cycle so things move fast. With that said some of my previous tutorials are a little out of date. The purpose of this post is to take all the concepts from the previous tutorials and roll them into this one.</p>
+
+<h2 id="whatwillthistutorialcover">What will this tutorial cover?</h2>
+
+<p>This application is an example of a blog. You'll be able to login with Twitter and add or delete posts. In additions you can leave a comment on anyone else's post.</p>
+
+<p>If you'd like to follow along the code is on <a href="https://github.com/ErikCH/FireBaseBlogExample" target="_blank">Github</a>. A fully working demo can be found <strong><a href="https://testemberfire.firebaseapp.com/" target="_blank">here</a></strong>.</p>
+
+<p>This tutorial will cover the following concepts:</p>
+
+<ul>
+<li>EmberFire</li>
+<li>torii/authentication</li>
+<li>helpers</li>
+<li>pods</li>
+<li>utilities</li>
+<li>routes</li>
+<li>models</li>
+<li>relationships</li>
+<li>Promises</li>
+<li>components</li>
+<li>templates</li>
+</ul>
+
+<p>This tutorial is meant for beginners to intermediate developers interested in Ember.js. I'll assume you have some knowledge of JavaScript and some basics of Ember. </p>
+
+<hr>
+
+<h2 id="versionsasofthiswriting">Versions as of this writing</h2>
+
+<p>As of this writing I'm using these versions of libraries:</p>
+
+<ul>
+<li>Ember CLI v1.13.13</li>
+<li>Node v5.3</li>
+<li>npm v2.14.10</li>
+<li>Ember 2.2.0</li>
+<li>Ember Data 2.2.0</li>
+</ul>
+
+<p>The latest beta version of Ember CLI was having issues with some of the addons so I'm using Ember CLI 1.13.13 instead of the beta. </p>
+
+<p>To get the latest version of Ember and Ember Data with Ember CLI v1.13.13 delete the <em>bower_components</em> and <em>node_modules</em> folders. Then update the bower.json and the package.json files with the latest versions of Ember and Ember data. Then run npm install and bower install again. </p>
+
+<hr>
+
+<h2 id="creatingthefolderstructureandconfiguringtheapp">Creating the folder structure and configuring the app</h2>
+
+<p>We'll assume you have Ember CLI installed. If not check out the getting started guide <a href="http://ember-cli.com/user-guide/#guide" target="_blank">here</a>.</p>
+
+<p>Let's begin by creating a new application. We'll just call it blog.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript">$ ember <span class="token keyword">new</span> <span class="token class-name">blog</span>
+</code></pre>
+
+<p>This will create all the necessary files for our project. </p>
+
+<p>Let's edit the <em>.ember-cli</em> file so we can generate files using the pods structure by default.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// .ember-cli
+</span><span class="token punctuation">{</span>
+  <span class="token string">"disableAnalytics"</span><span class="token punctuation">:</span> <span class="token keyword">false</span><span class="token punctuation">,</span>
+  <span class="token string">"usePods"</span><span class="token punctuation">:</span> <span class="token keyword">true</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>This will make sure all files we generate are in the pod structure. If you want more information on pods check out my <a href="http://www.programwitherik.com/ember-pods/">pod tutorial</a>.</p>
+
+<p>Next we'll edit the environment.js file so all pod files are put into a folder called <em>features</em> in the <em>app</em> folder.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// config/environment.js
+</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token keyword">var</span> ENV <span class="token operator">=</span> <span class="token punctuation">{</span>
+    modulePrefix<span class="token punctuation">:</span> <span class="token string">'blog'</span><span class="token punctuation">,</span>
+    podModulePrefix<span class="token punctuation">:</span> <span class="token string">'blog/features'</span><span class="token punctuation">,</span>
+</code></pre>
+
+<p>All pods will now be installed in <em>app/features</em>.</p>
+
+<p>Let's generate the rest of our files now.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript">$ ember g adapter application
+$ ember g route application
+$ ember g model comment
+$ ember g component add<span class="token operator">-</span>comments
+$ ember g component edit<span class="token operator">-</span>post
+$ ember g component <span class="token keyword">new</span><span class="token operator">-</span>post
+$ ember g template index
+$ ember g route <span class="token keyword">new</span>
+$ ember g model post
+$ ember g route posts
+$ ember g model user
+$ ember install emberfire
+$ ember install torii
+$ ember install ember<span class="token operator">-</span>moment
+$ ember install ember<span class="token operator">-</span>cli<span class="token operator">-</span>showdown
+$ ember install ember<span class="token operator">-</span>bootstrap
+</code></pre>
+
+<p>You may have noticed that we have a <em>features/post</em> folder and a <em>features/posts</em> folder. This is true with user and comment as well. Unfortunately by convention model's are usually named with a singular name and the routes are plural. This doesn't quite fit in with the pod structure. There is talk <a href="https://github.com/ember-cli/ember-resolver/issues/28" target="_blank">here</a> on what to do about it for the future while the pod structure is finalized. For now we'll live with it.</p>
+
+<h4 id="updatetheconfigfileforfirebase">Update the config file for Firebase</h4>
+
+<p>After installing the Firebase addon we'll need to configure it.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// config/environment.js
+</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+firebase<span class="token punctuation">:</span> <span class="token string">'https://YOUR-FIREBASE-NAME.firebaseio.com/'</span><span class="token punctuation">,</span>  
+torii<span class="token punctuation">:</span> <span class="token punctuation">{</span>  
+   sessionServiceName<span class="token punctuation">:</span> <span class="token string">'session'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+
+<p>Make sure to change the URL to the correct one from Firebase. If you don't have one already signup for an account <a href="http://www.firebase.com/" target="_blank">here</a>. It'll walk you through creating your first Firebase app.  </p>
+
+<p>When using Emberfire with torii we'll have access to a service called session. This session service will be used throughout the application. After being authenticated we'll be able to pull the username <em>{{session.currentUser.username}}</em>, uid <em>{{session.uid}}</em> and profileImageURL <em>{{session.currentUser.profileImageURL}}</em> from it. You can find more about the twitter session object <a href="https://www.firebase.com/docs/web/guide/login/twitter.html" target="_blank">here</a>.</p>
+
+<p>After installing Emberfire it creates an application adapter for us! How convenient, although it doesn't generate it in the correct location for the pod structure. We'll need to move it to the right place. </p>
+
+<pre class=" language-javascript"><code class=" language-javascript">$ mv app<span class="token operator">/</span>adapters<span class="token operator">/</span>application<span class="token punctuation">.</span>js app<span class="token operator">/</span>features<span class="token operator">/</span>application<span class="token operator">/</span>adapter<span class="token punctuation">.</span>js
+</code></pre>
+
+<h4 id="configuringtorii">Configuring Torii</h4>
+
+<p><a href="https://github.com/Vestorly/torii" target="_blank">Torii</a> is an authentication library for Ember. It's the preferred way to work with authentication with Emberfire. </p>
+
+<p>Create a new folder in app called <em>torii-adapters</em>  </p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/torii-adapters/application.js
+</span><span class="token keyword">import</span> Ember from <span class="token string">'ember'</span><span class="token punctuation">;</span>  
+<span class="token keyword">import</span> ToriiFirebaseAdapter from <span class="token string">'emberfire/torii-adapters/firebase'</span><span class="token punctuation">;</span>  
+<span class="token keyword">export</span> <span class="token keyword">default</span> ToriiFirebaseAdapter<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+  firebase<span class="token punctuation">:</span> Ember<span class="token punctuation">.</span>inject<span class="token punctuation">.</span><span class="token function">service<span class="token punctuation">(</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>This will configure torii so we can use authetication in our app. You can take a sneak peak of how it's implementing everything by looking at the <em>node_modules/emberfire/addon/torii-adapters/firebase.json</em> file. This is where the open, fetch and close methods are defined. </p>
+
+<p>The next step is to log into the Firebase dashboard and setup the <em>User Login and Authentication</em> tab for Twitter. I'm not going to get into details because you can find the directions <a href="https://www.firebase.com/docs/web/guide/login/twitter.html" target="_blank">here</a>. Essentially you'll need to create a Twitter application and input the Twitter API key and API secret key into the dashboard. </p>
+
+<p>After this is all setup we'll be able to use the <em>session</em> service throughout our application to login, logout and check authentication. </p>
+
+<h4 id="deletenonpodstructurefolders">Delete non-pod structure folders</h4>
+
+<p>Since we are using pods we can clean up the app folder structure. Delete all the folders except for <em>styles</em>, <em>features</em> and <em>torii-adapters</em>. The directory structure should look like this.</p>
+
+<ul>
+<li>features/</li>
+<li>styles/</li>
+<li>torii-adapters/</li>
+<li>app.js</li>
+<li>index.html</li>
+<li>router.js</li>
+</ul>
+
+<p>That's it! We'll create a few more folders for the utils and helpers later. For now this will work.</p>
+
+<hr>
+
+<h2 id="usinges6inourapp">Using ES6 in our App</h2>
+
+<p>In my past tutorials I have used mostly used ES5 with some ES6. That's fine and it will work. With that said it's recommended to use ES6 in your Ember applications. It just makes things easier.  </p>
+
+<p>If you'r not familiar ES6 is the new ECMAScript standard. I've written about it <a href="http://www.programwitherik.com/6-new-features-of-es6/">here.</a>. It adds a bunch of new features into JavaScript.</p>
+
+<p>In this tutorial I'll be sticking with ES6. The three most important ES6 features I'll be using in this tutorial are:</p>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment" target="_blank">Desctructuring</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">Arrow Functions</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions" target="_blank">New method definitions</a></li>
+</ul>
+
+<h4 id="destructuring">Destructuring</h4>
+
+<p>Throughout this tutorial you'll see destructuring statements at the top of many class files. It may look like this.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token keyword">set</span><span class="token punctuation">,</span> <span class="token keyword">get</span><span class="token punctuation">}</span> <span class="token operator">=</span> Ember  
+</code></pre>
+
+<p>This is an easier way to create the variable <em>set</em> and <em>get</em> for <em>Ember.set/Ember.get</em>. Instead of having to write out <em>Ember.get</em> or <em>Ember.set</em> over and over again I can use the shorthand <em>set</em> or <em>get</em> instead. </p>
+
+<p>You maybe asking why I'm not using <em>this.set</em> or <em>this.get</em>? Well their equal, and there are some <a href="http://blog.ksol.fr/when-to-use-ember-get/" target="_blank">advantages</a> in using <em>Ember.get</em> instead of <em>this.get</em>. It's also seems to be the preferred method to use. </p>
+
+<h4 id="arrowfunctions">Arrow Functions</h4>
+
+<p>In this app I'll stick to using arrow functions. They have a shorter syntax and it lexically binds the <em>this</em> value. They look like this.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript">   <span class="token comment" spellcheck="true"> //old way
+</span>    a<span class="token punctuation">.</span><span class="token function">map<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> s<span class="token punctuation">.</span>length<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token comment" spellcheck="true"> //new way
+</span>    a<span class="token punctuation">.</span><span class="token function">map<span class="token punctuation">(</span></span>s <span class="token operator">=</span><span class="token operator">&gt;</span> s<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true"> //or
+</span>    a<span class="token punctuation">.</span><span class="token function">map<span class="token punctuation">(</span></span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> s<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<h4 id="methoddefinitions">Method Definitions</h4>
+
+<p>Using the new ES6 method definitions saves a little bit of time. This is the older method function syntax.  </p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+actions<span class="token punctuation">:</span><span class="token punctuation">{</span>  
+     submitAction<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true"> //code here
+</span>      <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>Now we can remove the function part all together.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+actions<span class="token punctuation">:</span> <span class="token punctuation">{</span>  
+       <span class="token function">submitAction<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+
+<p>It's just a little cleaner.</p>
+
+<p>There are a few other things I'm using, but you'll notice these the most.</p>
+
+<hr>
+
+<h2 id="configuretherouter">Configure the router</h2>
+
+<p>For this application we want the title of each post to be the name of the route. For example if the title of the blog post is <em>Ember 2.0 Example App</em> then the URL should be <em>/ember_20_example_app</em>. We'll use a utility to help make this possible. For now we'll create a dynamic segment called <em>:titleURL</em>.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/router.js
+</span><span class="token keyword">import</span> Ember from <span class="token string">'ember'</span><span class="token punctuation">;</span>  
+<span class="token keyword">import</span> config from <span class="token string">'./config/environment'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> Router <span class="token operator">=</span> Ember<span class="token punctuation">.</span>Router<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+  location<span class="token punctuation">:</span> config<span class="token punctuation">.</span>locationType
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Router<span class="token punctuation">.</span><span class="token function">map<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">route<span class="token punctuation">(</span></span><span class="token string">'posts'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>path<span class="token punctuation">:</span> <span class="token string">'/:titleURL'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">route<span class="token punctuation">(</span></span><span class="token string">'new'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Router<span class="token punctuation">;</span>  
+</code></pre>
+
+<p>The application route is already defined by default. This route is where we'll display each blog post. The posts route will display each individual blog post. The new route is where we will add new blog posts.</p>
+
+<hr>
+
+<h2 id="definingourmodels">Defining our models</h2>
+
+<p><img src="./Ember 2.0 Example App With Firebase And Login Authentication_files/uml-update.png" alt=""></p>
+
+<p>We'll be using three different models: comment, post and user. The relationships will follow these rules.</p>
+
+<ul>
+<li>Each user will have zero or more comments</li>
+<li>Each user will have zero or more posts</li>
+<li>Each post will have zero or more comments</li>
+</ul>
+
+<p>This is a very simple example as demonstrated by my UML diagram above. </p>
+
+<h4 id="postmodel">Post Model</h4>
+
+<p>Let's begin by taking a look at the posts model.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/post/model.js
+</span><span class="token keyword">import</span> DS from <span class="token string">'ember-data'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> DS<span class="token punctuation">.</span>Model<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+    title<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">attr<span class="token punctuation">(</span></span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    body<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">attr<span class="token punctuation">(</span></span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    titleURL<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">attr<span class="token punctuation">(</span></span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    comments<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">hasMany<span class="token punctuation">(</span></span><span class="token string">'comment'</span> <span class="token punctuation">)</span><span class="token punctuation">,</span>
+    user<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">belongsTo<span class="token punctuation">(</span></span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    date<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">attr<span class="token punctuation">(</span></span><span class="token string">'date'</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Each post as a title, body, titleURL and date. Each comment also has many comments and belongs to user. </p>
+
+<h4 id="commentmodel">Comment Model</h4>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/comment/model.js
+</span><span class="token keyword">import</span> DS from <span class="token string">'ember-data'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> DS<span class="token punctuation">.</span>Model<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+    body<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">attr<span class="token punctuation">(</span></span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    user<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">belongsTo<span class="token punctuation">(</span></span><span class="token string">'user'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    post<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">belongsTo<span class="token punctuation">(</span></span><span class="token string">'post'</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>The comment model has a body and belongs to user and post. That way you can track the user and post with each comment. </p>
+
+<h4 id="usermodel">User Model</h4>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/user/model.js
+</span><span class="token keyword">import</span> DS from <span class="token string">'ember-data'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> DS<span class="token punctuation">.</span>Model<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+  uid<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">attr<span class="token punctuation">(</span></span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  username<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">attr<span class="token punctuation">(</span></span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  avatar<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">attr<span class="token punctuation">(</span></span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  posts<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">hasMany<span class="token punctuation">(</span></span><span class="token string">'post'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  comments<span class="token punctuation">:</span> DS<span class="token punctuation">.</span><span class="token function">hasMany<span class="token punctuation">(</span></span><span class="token string">'comment'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>The user model has a uid, which is where we will store the unique identifier that is passed from Firebase after authenticating the user. We also store the username, the avatar which is the Twitter picture, and it has many posts and comments.</p>
+
+<hr>
+
+<h2 id="utilsandhelpers">Utils and Helpers</h2>
+
+<p>To make our job easier we can use utils and helpers. Utils are small snippets of code that we can import anywhere. It'll help us with some common tasks. </p>
+
+<p>Helpers are used with templates. You might be familiar with <a href="https://guides.emberjs.com/v1.10.0/templates/input-helpers/" target="_blank">input helpers</a>. Ember gives us the flexibility in creating our own. </p>
+
+<h4 id="creatinganexcerpthelper">Creating an excerpt Helper</h4>
+
+<p>When displaying each post on the front page we'll want to just show the first 15 characters. That way the user will get an idea what the post is about. To do that we'll create a really simple helper called excerpt.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/excerpt/helper.js
+</span><span class="token keyword">import</span> Ember from <span class="token string">'ember'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">excerpt<span class="token punctuation">(</span></span>params<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">return</span> params<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">substring<span class="token punctuation">(</span></span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">'...'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Ember<span class="token punctuation">.</span>Helper<span class="token punctuation">.</span><span class="token function">helper<span class="token punctuation">(</span></span>excerpt<span class="token punctuation">)</span><span class="token punctuation">;</span>  
+</code></pre>
+
+<p>When working with helpers they will receive a <em>params</em> array. The excerpt function returns a substring of the first 15 characters and appends '...' at the end. </p>
+
+<h4 id="checkinguserutil">Checking user util</h4>
+
+<p>The first of two utilities we'll be creating is called <em>get-or-create-user</em>. </p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/get-or-create-user/util.js
+</span><span class="token keyword">import</span> Ember from <span class="token string">'ember'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span>RSVP<span class="token punctuation">:</span> <span class="token punctuation">{</span>Promise<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">=</span> Ember<span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">getOrCreateUser<span class="token punctuation">(</span></span>uid<span class="token punctuation">,</span>username<span class="token punctuation">,</span>avatar<span class="token punctuation">,</span>store<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+        store<span class="token punctuation">.</span><span class="token function">query<span class="token punctuation">(</span></span><span class="token string">'user'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>orderBy<span class="token punctuation">:</span> <span class="token string">'uid'</span><span class="token punctuation">,</span> equalTo<span class="token punctuation">:</span> uid <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span> <span class="token punctuation">(</span>records<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>records<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'length'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token function">resolve<span class="token punctuation">(</span></span>store<span class="token punctuation">.</span><span class="token function">createRecord<span class="token punctuation">(</span></span><span class="token string">'user'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+                    uid<span class="token punctuation">:</span> uid<span class="token punctuation">,</span>
+                    username<span class="token punctuation">:</span>username<span class="token punctuation">,</span>
+                    avatar<span class="token punctuation">:</span>avatar
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">;// end resolve
+</span>            <span class="token comment" spellcheck="true">}// end if
+</span>            <span class="token keyword">else</span><span class="token punctuation">{</span>
+                <span class="token function">resolve<span class="token punctuation">(</span></span>records<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'firstObject'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">}// end else
+</span>        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">;// end store
+</span>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true"> // end promise
+</span><span class="token punctuation">}</span>
+</code></pre>
+
+<p>In this example we create a <a href="http://emberjs.com/api/classes/RSVP.Promise.html" target="_blank">Ember.RSVP.Promise</a> that resolves with either the record of the new user or the existing user record.</p>
+
+<p>The purpose of this is to find if the uid passed to the function matches an existing user. If it does it returns that user, if not it creates a new one. </p>
+
+<p>To accomplish this we use the Emberfire query method. The documentation is <a href="https://www.firebase.com/docs/web/libraries/ember/api.html" target="_blank">here</a>. We have to pass in the store because the store is not injected into utils by default. </p>
+
+<h4 id="cleaningtheurl">Cleaning the URL</h4>
+
+<p>To make this tutorial more interesting I changed the way we are storing the URL to each post. Each post's title will act as the URL. Therefore we need to clean the URL so it doesn't have any weird characters in it.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/clean/util.js
+</span><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">clean<span class="token punctuation">(</span></span>title<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+    title <span class="token operator">=</span> title<span class="token punctuation">.</span><span class="token function">replace<span class="token punctuation">(</span></span><span class="token regex">/ /g</span><span class="token punctuation">,</span> <span class="token string">'_'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> title<span class="token punctuation">.</span><span class="token function">replace<span class="token punctuation">(</span></span><span class="token regex">/[^a-zA-Z0-9-_]/g</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>This function changes all spaces to underscores and removes all characters except a-z, A-Z and 0-9, using some regular expression.</p>
+
+<hr>
+
+<h2 id="components">Components</h2>
+
+<p>In our tutorial we want our components help with the logic for our posts. The components will allow the user to edit, delete or create new posts. It will also handle the comments.</p>
+
+<p>When creating components it's a good idea to keep a few <a href="https://poteto.github.io/component-best-practices/#/" target="_blank">best practices</a> in mind. One of the most important ones is data down and action up. We want to pass our models and session information down, but we don't want to mutate or change them in the component. Rather we'll send them back up to the route to be updated. </p>
+
+<p>We'll be using <em>sendAction</em> in this example instead of closure actions. Check out Jeff's <a href="https://www.emberscreencasts.com/posts/76-closure-actions-in-ember-20-components-passing-functions" target="_blank">tutorial</a> on closure actions for more information. The reason being is that you can't pass a closure action from a route. At least not until routable components lands in Ember.js. Since I have all my actions in my routes and I don't have anything in my controllers I'll use <em>sendAction</em> for now.  </p>
+
+<blockquote>
+  <p><a href="http://ctt.ec/u7R41" target="_blank">The reason being is that you can't pass a closure action from a route.</a></p>
+</blockquote>
+
+<h4 id="commentscomponentandtemplate">Comments component and template</h4>
+
+<p>The comment component will display and add comments.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/components/add-comments/template.hbs
+</span><span class="token operator">&lt;</span>h4<span class="token operator">&gt;</span>Comments<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">/</span>h4<span class="token operator">&gt;</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span>#unless post<span class="token punctuation">.</span>comments<span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>h4<span class="token operator">&gt;</span> No Comments<span class="token operator">&lt;</span><span class="token operator">/</span>h4<span class="token operator">&gt;</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span>unless<span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span>#each post<span class="token punctuation">.</span>comments as <span class="token operator">|</span>comment<span class="token operator">|</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'comments'</span><span class="token operator">&gt;</span>  
+    <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">'{{comment.user.avatar}}'</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token punctuation">{</span><span class="token punctuation">{</span>comment<span class="token punctuation">.</span>body<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+    <span class="token operator">-</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">'http://twitter.com/{{comment.user.username}}'</span> target<span class="token operator">=</span><span class="token string">'_blank'</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>comment<span class="token punctuation">.</span>user<span class="token punctuation">.</span>username<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>  
+    <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span>each<span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span>#<span class="token keyword">if</span> session<span class="token punctuation">.</span>isAuthenticated<span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'box'</span><span class="token operator">&gt;</span>  
+    <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">'{{session.currentUser.profileImageURL}}'</span> height<span class="token operator">=</span><span class="token string">'70px'</span> width<span class="token operator">=</span><span class="token string">'70px'</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>textarea rows<span class="token operator">=</span><span class="token string">'2'</span> placeholder<span class="token operator">=</span><span class="token string">'Add New Comment'</span> value<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>body<span class="token punctuation">}</span><span class="token punctuation">}</span> onchange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token punctuation">(</span>mut body<span class="token punctuation">)</span> value<span class="token operator">=</span><span class="token string">'target.value'</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>button <span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token string">'submitComment'</span> session body<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Submit<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>  
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+
+<p>The <em>session</em> and <em>comment</em> is passed into the component. We can use it to check if the user is logged in and display comments. If they are authenticated they'll be able to leave a comment. The <a href="https://guides.emberjs.com/v2.2.0/templates/conditionals/" target="_blank">unless</a> and <a href="https://guides.emberjs.com/v2.2.0/templates/conditionals/" target="_blank">if</a> helpers to make this possible.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token operator">&lt;</span>textarea rows<span class="token operator">=</span><span class="token string">'2'</span> placeholder<span class="token operator">=</span><span class="token string">'Add New Comment'</span> value<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>body<span class="token punctuation">}</span><span class="token punctuation">}</span> onchange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token punctuation">(</span>mut body<span class="token punctuation">)</span> value<span class="token operator">=</span><span class="token string">'target.value'</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>  
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+
+<p>Ember 2.0 has been promoting one-way-binding. What that means in our example is that the <em>body</em> property is copied to the template. Any changes to it won't effect the parent component's property. This actually makes a lot of sense.</p>
+
+<p>One way to update the body property in the template is to attach an action to the <em>onchange</em> event. When any change occurs the <em>target.value</em> is copied to the body property. The <em>mut</em> helper makes the body property mutable.  Once this is done the body property can then be submitted as an argument to the <em>submitComment</em> action in the component.</p>
+
+<p>In some instances using one way bindings with native <code>&lt;input&gt;</code> elements might cause cursor problems. Check out Dockyards <a href="https://github.com/dockyard/ember-one-way-controls" target="_blank">ember-one-way-controls</a> addon. It fixes this and adds a lot more features.  </p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/components/add-comments/component.js
+</span><span class="token keyword">import</span> Ember from <span class="token string">'ember'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Ember<span class="token punctuation">.</span>Component<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+    actions<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token function">submitComment<span class="token punctuation">(</span></span>author<span class="token punctuation">,</span> body<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">let</span> post <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'post'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">sendAction<span class="token punctuation">(</span></span><span class="token string">'store'</span><span class="token punctuation">,</span>author<span class="token punctuation">,</span>body<span class="token punctuation">,</span>post<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setProperties<span class="token punctuation">(</span></span><span class="token punctuation">{</span>
+                body<span class="token punctuation">:</span> <span class="token string">''</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>The submit action receives the <em>author</em> and <em>body</em> It then sends the action to the route and clears the property. </p>
+
+<h4 id="editpostcomponentandtemplate">Edit post component and template</h4>
+
+<p>The edit-post component does a lot of things. It's used to display each post and allow logged in users to edit their posts.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/components/edit-post/template.hbs
+</span><span class="token punctuation">{</span><span class="token punctuation">{</span>#link<span class="token operator">-</span>to  <span class="token string">'index'</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&amp;</span>#<span class="token number">8592</span><span class="token punctuation">;</span> back
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span>link<span class="token operator">-</span>to<span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span>#each model as <span class="token operator">|</span>post<span class="token operator">|</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'row'</span><span class="token operator">&gt;</span>  
+    <span class="token punctuation">{</span><span class="token punctuation">{</span>#<span class="token keyword">if</span> isEditing<span class="token punctuation">}</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'col-md-4 border'</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>form <span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token string">'save'</span> post on<span class="token operator">=</span><span class="token string">'submit'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>dl<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>dt<span class="token operator">&gt;</span>Title<span class="token punctuation">:</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span>textarea cols<span class="token operator">=</span><span class="token number">40</span> rows<span class="token operator">=</span><span class="token string">'1'</span> value<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token punctuation">}</span> oninput<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token punctuation">(</span>mut post<span class="token punctuation">.</span>title<span class="token punctuation">)</span> value<span class="token operator">=</span><span class="token string">'target.value'</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>dt<span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>dt<span class="token operator">&gt;</span>Body<span class="token punctuation">:</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span><span class="token operator">&lt;</span>textarea cols<span class="token operator">=</span><span class="token number">40</span> rows<span class="token operator">=</span><span class="token string">'6'</span>  value<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>body<span class="token punctuation">}</span><span class="token punctuation">}</span> oninput<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token punctuation">(</span>mut post<span class="token punctuation">.</span>body<span class="token punctuation">)</span> value<span class="token operator">=</span><span class="token string">'target.value'</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>dt<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>dl<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token keyword">class</span> <span class="token operator">=</span> <span class="token string">'row'</span><span class="token operator">&gt;</span>
+                    <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">'submit'</span> <span class="token keyword">class</span> <span class="token operator">=</span> <span class="token string">'btn btn-primary'</span><span class="token operator">&gt;</span>Done<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>div  <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'col-md-4 border'</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">'{{post.user.avatar}}'</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>markdown<span class="token operator">-</span>to<span class="token operator">-</span>html markdown<span class="token operator">=</span>post<span class="token punctuation">.</span>body<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>h4<span class="token operator">&gt;</span><span class="token operator">-</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">'http://twitter.com/{{post.user.username}}'</span> target<span class="token operator">=</span><span class="token string">'_blank'</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>user<span class="token punctuation">.</span>username<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>h4<span class="token operator">&gt;</span>
+                <span class="token punctuation">{</span><span class="token punctuation">{</span>#<span class="token keyword">if</span> post<span class="token punctuation">.</span>date<span class="token punctuation">}</span><span class="token punctuation">}</span>
+                <span class="token punctuation">{</span><span class="token punctuation">{</span>moment<span class="token operator">-</span>from<span class="token operator">-</span>now post<span class="token punctuation">.</span>date<span class="token punctuation">}</span><span class="token punctuation">}</span>
+                <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+            <span class="token punctuation">{</span><span class="token punctuation">{</span>#<span class="token keyword">if</span> session<span class="token punctuation">.</span>isAuthenticated<span class="token punctuation">}</span><span class="token punctuation">}</span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span>#<span class="token keyword">if</span> isAllowed<span class="token punctuation">}</span><span class="token punctuation">}</span>
+                <span class="token operator">&lt;</span>form <span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">'submit'</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'btn btn-primary'</span><span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token string">'edit'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Edit<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">'delete'</span> <span class="token keyword">class</span><span class="token operator">=</span> <span class="token string">'btn btn-primary'</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token string">'delete'</span> post<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Delete<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>  
+<span class="token punctuation">{</span><span class="token punctuation">{</span>add<span class="token operator">-</span>comments post<span class="token operator">=</span>post session<span class="token operator">=</span>session store<span class="token operator">=</span><span class="token string">'createComment'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span>each<span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+
+<p>The template is broken into two parts. The first part only displays if <em>isEditing</em> is true. The next section shows the post. The markdown addon is used here to convert the text in <em>post.body</em> to <a href="https://daringfireball.net/projects/markdown/" target="_blank">markdown</a>. This gives us a preview of our edits while we're typing. The moment addon is also used here to display the date. Once again we'll use the <code>&lt;textarea&gt;</code> element using one-way-binding to capture the body and title.</p>
+
+<p>It should look like this.</p>
+
+<p><img src="./Ember 2.0 Example App With Firebase And Login Authentication_files/postexample2.png" alt=""></p>
+
+<p>The text on the left is displayed in markdown on the right. </p>
+
+<p>Here is the component.  </p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/components/edit-post/component.js
+</span><span class="token keyword">import</span> Ember from <span class="token string">'ember'</span><span class="token punctuation">;</span>  
+<span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">,</span> <span class="token keyword">set</span><span class="token punctuation">}</span> <span class="token operator">=</span> Ember<span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Ember<span class="token punctuation">.</span>Component<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+    isEditing<span class="token punctuation">:</span> <span class="token keyword">false</span><span class="token punctuation">,</span>
+       classNames<span class="token punctuation">:</span> <span class="token string">'edit'</span><span class="token punctuation">,</span>
+       isAllowed<span class="token punctuation">:</span> Ember<span class="token punctuation">.</span><span class="token function">computed<span class="token punctuation">(</span></span><span class="token string">'model.firstObject.user.username'</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.username'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'model.firstObject.user.username'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.username'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+       actions<span class="token punctuation">:</span><span class="token punctuation">{</span>
+           <span class="token function">save<span class="token punctuation">(</span></span>post<span class="token punctuation">)</span><span class="token punctuation">{</span>
+               <span class="token keyword">let</span> sessionName <span class="token operator">=</span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.username'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token keyword">if</span><span class="token punctuation">(</span>sessionName <span class="token operator">===</span> post<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'user.username'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                   <span class="token keyword">set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">'isEditing'</span><span class="token punctuation">,</span> <span class="token keyword">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                   <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">sendAction<span class="token punctuation">(</span></span><span class="token string">'save'</span><span class="token punctuation">,</span>post<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+               <span class="token punctuation">}</span>
+               <span class="token keyword">else</span><span class="token punctuation">{</span>
+                   <span class="token function">alert<span class="token punctuation">(</span></span><span class="token string">'Sorry not authorized'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token punctuation">}</span>
+
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">edit<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">'isEditing'</span><span class="token punctuation">,</span> <span class="token keyword">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token keyword">delete</span><span class="token punctuation">(</span>post<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">sendAction<span class="token punctuation">(</span></span><span class="token string">'delete'</span><span class="token punctuation">,</span>post<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'isEditing'</span><span class="token punctuation">,</span><span class="token keyword">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">createComment<span class="token punctuation">(</span></span>author<span class="token punctuation">,</span> body<span class="token punctuation">,</span> post<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">sendAction<span class="token punctuation">(</span></span><span class="token string">'createComment'</span><span class="token punctuation">,</span>author<span class="token punctuation">,</span> body<span class="token punctuation">,</span> post<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Let's take a look a little closer.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript">       isAllowed<span class="token punctuation">:</span> Ember<span class="token punctuation">.</span><span class="token function">computed<span class="token punctuation">(</span></span><span class="token string">'model.firstObject.user.username'</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.username'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'model.firstObject.user.username'</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.username'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+</code></pre>
+
+<p>This computed property takes the model and session objects passed in and checks to see if the username matches**. The purpose is so users can't edit other people's posts only their own. The <em>isAllowed</em> computed property will return true if everything matches and false if it doesn't. <br>
+**This will need to be enforced on the server side to be effective</p>
+
+<p>The rest of the actions use <em>sendAction</em> to send everything to the route. The <em>isEditing</em> property keeps track if the article is being edited.</p>
+
+<h4 id="newpostcomponentandtemplate">New post component and template</h4>
+
+<p>The new post, as the name suggests, is used to create new posts. </p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/components/new-post/template.hbs
+</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>  
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'col-md-4 border'</span> <span class="token operator">&gt;</span>  
+        <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>New <span class="token class-name">Post</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>form <span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token string">'save'</span> title body on<span class="token operator">=</span><span class="token string">'submit'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>dl<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>dt<span class="token operator">&gt;</span>Title<span class="token punctuation">:</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>textarea cols<span class="token operator">=</span><span class="token number">40</span> rows<span class="token operator">=</span><span class="token string">'1'</span> placeholder<span class="token operator">=</span><span class="token string">'Title'</span> value<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>title<span class="token punctuation">}</span><span class="token punctuation">}</span> oninput<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token punctuation">(</span>mut title<span class="token punctuation">)</span> value<span class="token operator">=</span><span class="token string">'target.value'</span><span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>dt<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>dt<span class="token operator">&gt;</span>Body<span class="token punctuation">:</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>textarea cols<span class="token operator">=</span><span class="token number">40</span> rows<span class="token operator">=</span><span class="token string">'6'</span> placeholder<span class="token operator">=</span><span class="token string">'Body'</span>  value<span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>body<span class="token punctuation">}</span><span class="token punctuation">}</span> oninput<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token punctuation">(</span>mut body<span class="token punctuation">)</span> value<span class="token operator">=</span><span class="token string">'target.value'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>dt<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>dl<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>button type<span class="token operator">=</span><span class="token string">'submit'</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'btn btn-primary'</span><span class="token operator">&gt;</span>Add<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>  
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">'preview'</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'col-md-4 border'</span>  <span class="token operator">&gt;</span>  
+    <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Preview<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>title<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>h4<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>markdown<span class="token operator">-</span>to<span class="token operator">-</span>html markdown<span class="token operator">=</span>body<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h4<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>  
+</code></pre>
+
+<p>The template looks similar to the edit-post component template. I thought of trying to combine the two, however It ended up being too much work. </p>
+
+<p>One side shows the text boxes and the other side shows the edits. Once again we'll use one-way-input binding and the markdown addon.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/components/new-post/component.js
+</span><span class="token keyword">import</span> Ember from <span class="token string">'ember'</span><span class="token punctuation">;</span>  
+<span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token keyword">set</span><span class="token punctuation">}</span> <span class="token operator">=</span> Ember<span class="token punctuation">;</span>  
+<span class="token keyword">export</span> <span class="token keyword">default</span> Ember<span class="token punctuation">.</span>Component<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+    classNames<span class="token punctuation">:</span> <span class="token string">'new'</span><span class="token punctuation">,</span>
+    actions<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token function">save<span class="token punctuation">(</span></span>title<span class="token punctuation">,</span> body<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">sendAction<span class="token punctuation">(</span></span><span class="token string">'save'</span><span class="token punctuation">,</span>title<span class="token punctuation">,</span> body<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'title'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'body'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>This takes both the title and body and grabs the passed in save value and sends the action.</p>
+
+<p>If all goes well it should look like this.</p>
+
+<p><img src="./Ember 2.0 Example App With Firebase And Login Authentication_files/newpost2.png" alt=""></p>
+
+<p>That's it for our components.  </p>
+
+<hr>
+
+<h2 id="application">Application</h2>
+
+<p>When the app loads the application route will load. The application and index template will also load. In our app we want all the posts listed and clickable. Each post will link to the posts route that will display the edit-post component. </p>
+
+<h4 id="applicationtemplates">Application Templates</h4>
+
+<p>The application template is using bootstrap to display a simple navigation menu at the top. </p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/application/template.hbs
+</span><span class="token operator">&lt;</span>nav <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar navbar-inverse navbar-fixed-top"</span><span class="token operator">&gt;</span>  
+        <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container-fluid"</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"navbar-header"</span> href<span class="token operator">=</span><span class="token string">"#"</span><span class="token operator">&gt;</span>
+                        <span class="token punctuation">{</span><span class="token punctuation">{</span>#link<span class="token operator">-</span>to <span class="token string">'index'</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'navbar-brand'</span><span class="token punctuation">}</span><span class="token punctuation">}</span>Program With Erik Blog Example<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span>link<span class="token operator">-</span>to<span class="token punctuation">}</span><span class="token punctuation">}</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav navbar-nav"</span><span class="token operator">&gt;</span>
+                    <span class="token punctuation">{</span><span class="token punctuation">{</span>#<span class="token keyword">if</span> session<span class="token punctuation">.</span>isAuthenticated<span class="token punctuation">}</span><span class="token punctuation">}</span>
+                        <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>#link<span class="token operator">-</span>to <span class="token string">'new'</span><span class="token punctuation">}</span><span class="token punctuation">}</span>Add New <span class="token class-name">Post</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span>link<span class="token operator">-</span>to<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+                    <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"nav navbar-nav navbar-right"</span><span class="token operator">&gt;</span>
+                    <span class="token punctuation">{</span><span class="token punctuation">{</span>#unless session<span class="token punctuation">.</span>isAuthenticated<span class="token punctuation">}</span><span class="token punctuation">}</span>
+                        <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"#"</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token string">'login'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Login<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+                    <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token keyword">else</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+                        <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"#"</span> <span class="token punctuation">{</span><span class="token punctuation">{</span>action <span class="token string">'logout'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>Logout<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">'http://twitter.com/{{session.currentUser.username}}'</span> target<span class="token operator">=</span><span class="token string">'_blank'</span><span class="token operator">&gt;</span>
+                                <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">'{{session.currentUser.profileImageURL}}'</span> height<span class="token operator">=</span><span class="token string">'30px'</span> width<span class="token operator">=</span><span class="token string">'30px'</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+                            <span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+                        <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+                    <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span>unless<span class="token punctuation">}</span><span class="token punctuation">}</span>
+                <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>nav<span class="token operator">&gt;</span>  
+<span class="token punctuation">{</span><span class="token punctuation">{</span>outlet<span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+
+<p>In the code above the <em>session</em> service is used to display menu options. The login link logs the user in while the logout link logs the user out. Just for fun I added the current logged in users profile as a picture at the top that links to their Twitter profile.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/index/template.hbs
+</span><span class="token operator">&lt;</span>div <span class="token keyword">class</span> <span class="token operator">=</span> <span class="token string">'row main'</span><span class="token operator">&gt;</span>  
+    <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'col-md-4'</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>h1<span class="token operator">&gt;</span>Posts<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span>#each model as <span class="token operator">|</span>post<span class="token operator">|</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span><span class="token operator">&lt;</span>h2 <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'post-title'</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>#link<span class="token operator">-</span>to <span class="token string">'posts'</span> post<span class="token punctuation">.</span>titleURL<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>title<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span>link<span class="token operator">-</span>to<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>section <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">'post excerpt'</span><span class="token operator">&gt;</span>
+                <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>excerpt post<span class="token punctuation">.</span>body<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">-</span><span class="token punctuation">{</span><span class="token punctuation">{</span>post<span class="token punctuation">.</span>user<span class="token punctuation">.</span>username<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>section<span class="token operator">&gt;</span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span>#link<span class="token operator">-</span>to <span class="token string">'posts'</span> post<span class="token punctuation">.</span>titleURL<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token keyword">continue</span> reading <span class="token operator">&amp;</span>#<span class="token number">8594</span><span class="token punctuation">;</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span>link<span class="token operator">-</span>to<span class="token punctuation">}</span><span class="token punctuation">}</span>
+            <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">/</span>each<span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre>
+
+<p>The index template will render inside the application's outlet. This is where each post will be displayed. The each helper iterates over each post. This is also where we use the excerpt helper we created earlier. </p>
+
+<p>Notice how each post is linked to the titleURL, not the id? This is so we can have better looking URLs. The titleURL will get passed to the posts route so it can lookup the correct post and return the model.</p>
+
+<h4 id="applicationroute">Application Route</h4>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/application/route.js
+</span><span class="token keyword">import</span> Ember from <span class="token string">'ember'</span><span class="token punctuation">;</span>  
+<span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">}</span> <span class="token operator">=</span> Ember<span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Ember<span class="token punctuation">.</span>Route<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+    <span class="token function">beforeModel<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fetch<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">model<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>store<span class="token punctuation">.</span><span class="token function">findAll<span class="token punctuation">(</span></span><span class="token string">'post'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    actions<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token function">login<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">open<span class="token punctuation">(</span></span><span class="token string">'firebase'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> provider<span class="token punctuation">:</span> <span class="token string">'twitter'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function">logout<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">close<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>The route is responsible for returning the model and handling actions. In this example the model returns all the posts in the database. </p>
+
+<p>The login and logout actions use the session service. To login we call <em>open</em> and give it the name of the provider. In this case Twitter. To logout all we need to do is call close.</p>
+
+<p>In the future I'd like to update the application so the user is saved after a successful login. In addition a failed login should prompt the user. This isn't implemented yet either although it would be easy to add. As of now the user will be created later when they create a comment or a new post and a failed login isn't handled. This is fine for this tutorial.</p>
+
+<hr>
+
+<h2 id="displayingandeditingposts">Displaying and Editing Posts</h2>
+
+<p>The editing and displaying of individual posts is left up to the posts route. It uses the edit-post component to display the template and handle some basic logic. The posts route is responsible for communication with Firebase.</p>
+
+<h4 id="poststemplate">Posts Template</h4>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/posts/template.hbs
+</span><span class="token punctuation">{</span><span class="token punctuation">{</span>edit<span class="token operator">-</span>post model<span class="token operator">=</span>model session<span class="token operator">=</span>session save<span class="token operator">=</span><span class="token string">'save'</span> <span class="token keyword">delete</span><span class="token operator">=</span><span class="token string">'delete'</span> createComment<span class="token operator">=</span><span class="token string">'createComment'</span>  <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+
+<p>This posts template displays the edit-post component. The component by design is isolated so we must pass in the session and model into it.  This is also where we declare the name of the save, delete and createComment methods. These should match the names in the route.</p>
+
+<h4 id="postsroute">Posts Route</h4>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/posts/route.js
+</span><span class="token keyword">import</span> Ember from <span class="token string">'ember'</span><span class="token punctuation">;</span>  
+<span class="token keyword">import</span> cleanURI from <span class="token string">'../clean/util'</span><span class="token punctuation">;</span>  
+<span class="token keyword">import</span> getOrCreateUser from <span class="token string">'../get-or-create-user/util'</span><span class="token punctuation">;</span>  
+<span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">}</span> <span class="token operator">=</span> Ember<span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Ember<span class="token punctuation">.</span>Route<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+    <span class="token function">model<span class="token punctuation">(</span></span>param<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>store<span class="token punctuation">.</span><span class="token function">query<span class="token punctuation">(</span></span><span class="token string">'post'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>orderBy<span class="token punctuation">:</span> <span class="token string">'titleURL'</span><span class="token punctuation">,</span>equalTo<span class="token punctuation">:</span> param<span class="token punctuation">.</span>titleURL <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+       actions<span class="token punctuation">:</span><span class="token punctuation">{</span>
+           <span class="token keyword">delete</span><span class="token punctuation">(</span>post<span class="token punctuation">)</span><span class="token punctuation">{</span>
+               post<span class="token punctuation">.</span><span class="token function">deleteRecord<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+               post<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">transitionTo<span class="token punctuation">(</span></span><span class="token string">'index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token punctuation">}</span><span class="token punctuation">,</span>
+       <span class="token function">save<span class="token punctuation">(</span></span>post<span class="token punctuation">)</span><span class="token punctuation">{</span>
+           <span class="token keyword">let</span> titleURL <span class="token operator">=</span> <span class="token function">cleanURI<span class="token punctuation">(</span></span>post<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           post<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span><span class="token string">'titleURL'</span><span class="token punctuation">,</span>titleURL<span class="token punctuation">)</span><span class="token punctuation">;</span>
+           post<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">transitionTo<span class="token punctuation">(</span></span><span class="token string">'index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span><span class="token punctuation">,</span>
+       <span class="token function">createComment<span class="token punctuation">(</span></span>author<span class="token punctuation">,</span> body<span class="token punctuation">,</span>post<span class="token punctuation">)</span><span class="token punctuation">{</span>
+           <span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+           <span class="token keyword">let</span> comment <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>store<span class="token punctuation">.</span><span class="token function">createRecord<span class="token punctuation">(</span></span><span class="token string">'comment'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+               body<span class="token punctuation">:</span> body
+           <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token keyword">let</span> uid <span class="token operator">=</span> author<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'uid'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           user <span class="token operator">=</span> <span class="token function">getOrCreateUser<span class="token punctuation">(</span></span>uid<span class="token punctuation">,</span>
+                   <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.username'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                   <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.profileImageURL'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                   <span class="token keyword">this</span><span class="token punctuation">.</span>store<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+           user<span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+               userData<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'comments'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addObject<span class="token punctuation">(</span></span>comment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+               post<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'comments'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addObject<span class="token punctuation">(</span></span>comment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+               console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'test'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token keyword">return</span> comment<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'comment saved succesfully'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        <span class="token keyword">return</span> post<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                    <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span>`comment<span class="token punctuation">:</span>  $<span class="token punctuation">{</span>error<span class="token punctuation">}</span>`<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        comment<span class="token punctuation">.</span><span class="token function">rollbackAttributes<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                    <span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'post saved successfuly'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        <span class="token keyword">return</span> userData<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                    <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span>`post<span class="token punctuation">:</span>  $<span class="token punctuation">{</span>error<span class="token punctuation">}</span>`<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        post<span class="token punctuation">.</span><span class="token function">rollbackAttributes<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                    <span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'user saved successfuly'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                    <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span>`user<span class="token punctuation">:</span>  $<span class="token punctuation">{</span>error<span class="token punctuation">}</span>`<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        user<span class="token punctuation">.</span><span class="token function">rollbackAttributes<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+           <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>The posts route is probably the most complicated code in the app. The save and delete actions are self explanatory. Let's take a look at the createComment action and how it deals with creating a one-to-many relationship using Firebase.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+       <span class="token function">createComment<span class="token punctuation">(</span></span>author<span class="token punctuation">,</span> body<span class="token punctuation">,</span>post<span class="token punctuation">)</span><span class="token punctuation">{</span>
+           <span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+           <span class="token keyword">let</span> comment <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>store<span class="token punctuation">.</span><span class="token function">createRecord<span class="token punctuation">(</span></span><span class="token string">'comment'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+               body<span class="token punctuation">:</span> body
+           <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           <span class="token keyword">let</span> uid <span class="token operator">=</span> author<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'uid'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+           user <span class="token operator">=</span> <span class="token function">getOrCreateUser<span class="token punctuation">(</span></span>uid<span class="token punctuation">,</span>
+                   <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.username'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                   <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.profileImageURL'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                   <span class="token keyword">this</span><span class="token punctuation">.</span>store<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+
+<p>The first part here uses the <em>getOrCreateUser</em> utility we worked on earlier. It receives back an existing user model or a new one. This depends if the uid is already in the database or not. It also creates a new record for the comment.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+         user<span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+               userData<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'comments'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addObject<span class="token punctuation">(</span></span>comment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+               post<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'comments'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addObject<span class="token punctuation">(</span></span>comment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+               <span class="token keyword">return</span> comment<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'comment saved succesfully'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        <span class="token keyword">return</span> post<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                    <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span>`comment<span class="token punctuation">:</span>  $<span class="token punctuation">{</span>error<span class="token punctuation">}</span>`<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        comment<span class="token punctuation">.</span><span class="token function">rollbackAttributes<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                    <span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'post saved successfuly'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        <span class="token keyword">return</span> userData<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                    <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span>`post<span class="token punctuation">:</span>  $<span class="token punctuation">{</span>error<span class="token punctuation">}</span>`<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        post<span class="token punctuation">.</span><span class="token function">rollbackAttributes<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                    <span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'user saved successfuly'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                    <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                                        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span>`user<span class="token punctuation">:</span>  $<span class="token punctuation">{</span>error<span class="token punctuation">}</span>`<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        user<span class="token punctuation">.</span><span class="token function">rollbackAttributes<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+           <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+
+<p>The second part here uses promises. If the user promise resolves we first add the comment object to both the user and post. This is nessary when we are dealing with <em>hasMany</em> and <em>belongsTo</em> <a href="https://www.firebase.com/docs/web/libraries/ember/guide.html#section-relationships" target="_blank">relationships</a>. The next part uses chained promises to save information to the Firebase data store. </p>
+
+<p>First we save the comment, then the post and finally the user data. It must be in this order. If any of them fails we rollback the attribute so it doesn't get saved in the data store. </p>
+
+<p>We could do more error catching here, but for a basic example this is good enough.</p>
+
+<hr>
+
+<h2 id="creatingnewposts">Creating New Posts</h2>
+
+<p>The final route is called <em>new</em> and is used to create new posts. </p>
+
+<h4 id="newtemplates">New Templates</h4>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/new/template.hbs
+</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token keyword">new</span><span class="token operator">-</span>post save<span class="token operator">=</span><span class="token string">'save'</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+
+<p>This templates job is to use the new-post component.</p>
+
+<h4 id="newroute">New Route</h4>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/features/new/route.js
+</span><span class="token keyword">import</span> Ember from <span class="token string">'ember'</span><span class="token punctuation">;</span>  
+<span class="token keyword">import</span> cleanURI from <span class="token string">'../clean/util'</span><span class="token punctuation">;</span>  
+<span class="token keyword">import</span> getOrCreateUser from <span class="token string">'../get-or-create-user/util'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">,</span> <span class="token keyword">set</span> <span class="token punctuation">}</span> <span class="token operator">=</span> Ember<span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Ember<span class="token punctuation">.</span>Route<span class="token punctuation">.</span><span class="token function">extend<span class="token punctuation">(</span></span><span class="token punctuation">{</span>  
+    actions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token function">save<span class="token punctuation">(</span></span>title<span class="token punctuation">,</span>body<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> titleURL<span class="token operator">=</span> <span class="token function">cleanURI<span class="token punctuation">(</span></span>title<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> uid <span class="token operator">=</span> <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session.uid'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">let</span> post <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>store<span class="token punctuation">.</span><span class="token function">createRecord<span class="token punctuation">(</span></span><span class="token string">'post'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+                title<span class="token punctuation">:</span> title<span class="token punctuation">,</span>
+                body<span class="token punctuation">:</span> body<span class="token punctuation">,</span>
+                author<span class="token punctuation">:</span> <span class="token string">'test'</span><span class="token punctuation">,</span>
+                titleURL<span class="token punctuation">:</span>titleURL<span class="token punctuation">,</span>
+                date<span class="token punctuation">:</span> date
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            user <span class="token operator">=</span> <span class="token function">getOrCreateUser<span class="token punctuation">(</span></span>uid<span class="token punctuation">,</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.username'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                   <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span><span class="token string">'session.currentUser.profileImageURL'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                   <span class="token keyword">this</span><span class="token punctuation">.</span>store<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            user<span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token punctuation">(</span>userData<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{</span>
+                userData<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'posts'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addObject<span class="token punctuation">(</span></span>post<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                post<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then<span class="token punctuation">(</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">return</span> userData<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">'title'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">'body'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">transitionTo<span class="token punctuation">(</span></span><span class="token string">'index'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>In the route we create a new post and then add it as an object to the user. The post gets saved first then the user. This is another way of using promises and saving data.</p>
+
+<hr>
+
+<h2 id="settingupourcss">Setting up our CSS</h2>
+
+<p>I'm no CSS expert so I just used some basic CSS to style a few of the components and data in it.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token comment" spellcheck="true">// app/styles/app.css
+</span><span class="token punctuation">.</span>main <span class="token punctuation">{</span>
+    padding<span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+    margin<span class="token punctuation">:</span> 60px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>edit<span class="token punctuation">{</span>
+    padding<span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    margin<span class="token punctuation">:</span> 60px 5px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span><span class="token keyword">new</span><span class="token punctuation">{</span>
+    padding<span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    margin<span class="token punctuation">:</span> 60px 5px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+
+<span class="token punctuation">.</span>border<span class="token punctuation">{</span>
+    border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    border<span class="token punctuation">:</span> 2px solid black<span class="token punctuation">;</span>
+    width<span class="token punctuation">:</span> 560px<span class="token punctuation">;</span>
+    height<span class="token punctuation">:</span> <span class="token number">100</span><span class="token operator">%</span><span class="token punctuation">;</span>
+    padding<span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+    margin<span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+#preview<span class="token punctuation">{</span>
+    height<span class="token punctuation">:</span>370px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">.</span>comments<span class="token punctuation">{</span>
+    border<span class="token operator">-</span>radius<span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+    border<span class="token punctuation">:</span> 2px solid black<span class="token punctuation">;</span>
+    width<span class="token punctuation">:</span> 560px<span class="token punctuation">;</span>
+    margin<span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+    padding<span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+textarea<span class="token punctuation">{</span>
+
+    width<span class="token punctuation">:</span> 460px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<hr>
+
+<h2 id="firebasesecurity">Firebase Security</h2>
+
+<p>I'm still working on some rules for Firebase. Here is what I have so far.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript"><span class="token punctuation">{</span>
+    <span class="token string">"rules"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">".read"</span><span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">,</span>
+      <span class="token string">"posts"</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">"$post"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">".write"</span><span class="token punctuation">:</span> <span class="token string">"auth !== null"</span>
+
+        <span class="token punctuation">}</span>
+
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">"comments"</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">"$comment"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">"body"</span><span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">".validate"</span><span class="token punctuation">:</span> <span class="token string">"newData.val().length &gt; 2"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token string">".validate"</span><span class="token punctuation">:</span> <span class="token string">"newData.hasChildren(['body','user'])"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token string">".write"</span><span class="token punctuation">:</span> <span class="token string">"auth !== null"</span>
+
+
+
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">"users"</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">"$user"</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+               <span class="token string">".write"</span><span class="token punctuation">:</span> <span class="token string">"auth !== null "</span>
+
+        <span class="token punctuation">}</span>
+
+      <span class="token punctuation">}</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>As of now all the security rules do is make sure that the user is authenticated before their able to write. I also validate that the comment is more then 2 characters long. </p>
+
+<p>In the future I'd like to add a rule that users can't delete or edit posts that are not their own. I'll be updating these security rules in the near future.</p>
+
+<hr>
+
+<h2 id="firebasedeploy">Firebase Deploy</h2>
+
+<p>The final step is to deploy to Firebase.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript">$ npm install <span class="token operator">-</span>g firebase<span class="token operator">-</span>tools
+$ firebase login
+$ firebase init<span class="token comment" spellcheck="true"> //choose dist as the public directory
+</span>$ ember build <span class="token operator">-</span>e prod
+$ firebase deploy
+</code></pre>
+
+<p>That's it! Be aware you should probably add a rewrite rule to your firebase.json file. Otherwise you might have some issues with URLs. Mine looks like this.</p>
+
+<pre class=" language-javascript"><code class=" language-javascript">  <span class="token string">"firebase"</span><span class="token punctuation">:</span> <span class="token string">"testemberfire"</span><span class="token punctuation">,</span>
+  <span class="token string">"public"</span><span class="token punctuation">:</span> <span class="token string">"dist"</span><span class="token punctuation">,</span>
+    <span class="token string">"rewrites"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+        <span class="token string">"source"</span><span class="token punctuation">:</span> <span class="token string">"**"</span><span class="token punctuation">,</span>
+        <span class="token string">"destination"</span><span class="token punctuation">:</span> <span class="token string">"/index.html"</span>
+      <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token string">"ignore"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"firebase.json"</span><span class="token punctuation">,</span>
+    <span class="token string">"**/.*"</span><span class="token punctuation">,</span>
+    <span class="token string">"**/node_modules/**"</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<hr>
+
+<h2 id="futureimprovements">Future Improvements</h2>
+
+<p>As with any project there is a lot of improvements I can do for the future. Here are a few of the top of my head.</p>
+
+<ul>
+<li>More error checking in the app</li>
+<li>Add test cases</li>
+<li>Add a way to delete comments</li>
+<li>Setup pagination on the front page</li>
+<li>Update security rules</li>
+<li>Redo CSS</li>
+</ul>
+
+<p>I'll be looking into this as time goes. </p>
+
+<p>If you got this far please share this post with others! Click on the tweet button below!</p>
+
+<p>If you see any mistakes, or improvements please post below. I'll be making updates to this tutorial as times goes on!</p>
+
+<p>Thanks!</p>
+
+<p><a href="http://lisaspeakmanphotography.com/" target="_blank">Image Credit To Lisa Speakman</a></p>
+	</section>
+	<footer class="post-footer">
+
+        <div id="sbm">
+	<!-- Begin MailChimp Signup Form -->
+				<link href="./Ember 2.0 Example App With Firebase And Login Authentication_files/slim-081711.css" rel="stylesheet" type="text/css">
+				<style type="text/css">
+					#mc_embed_signup{border-style:solid; clear:left; font:14px Helvetica,Arial,sans-serif; }
+					#mc_embed_signup input.email {color:black; }
+					
+				</style>
+				<div id="mc_embed_signup">
+				<form action="http://remindmemo.us6.list-manage1.com/subscribe/post?u=77b154e9d227ffb2802dc059e&amp;id=e6d7de1574" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+					<label for="mce-EMAIL">Are you a software developer?</label>				
+					<div style="padding-bottom:10px;">Join me and receive a FREE Ember testing cheat sheet and a FREE Aurelia getting started cheat sheet. As well as advice and information on the latest in Node.js, Ember CLI and JavaScript.</div>
+					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+					<input type="hidden" name="endofpost" id="endofpost" value="yes">
+				    <div style="position: absolute; left: -5000px;"><input type="text" name="b_77b154e9d227ffb2802dc059e_e6d7de1574" tabindex="-1" value=""></div>
+				    <div class="clear"><input type="submit" value="Join Now" name="subscribe" id="mc-embedded-subscribe" class="sign"></div>
+				</form>
+				I hate SPAM. I won't share your your email address with anyone, ever. 
+				</div>
+				
+	<!--End mc_embed_signup-->
+</div>
+
+
+		
+
+		
+            	<section class="author">
+                <div class="authorimage" style="background: url(/content/images/2015/02/eriksmall.jpg)"></div>
+                <p><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 76px; height: 28px;" title="Twitter Tweet Button" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/tweet_button.4ca9f1d9cb5a373a2f7d0969f5b40084.en.html"></iframe></p>
+                <p class="bio">If you like to reach me find me on <a href="https://www.twitter.com/erikch" target="_blank">Twitter</a> or <a rel="author" href="https://plus.google.com/107517866406570189174?rel=author" target="_blank">Google+</a>.</p>
+                
+            </section>
+	</footer>
+
+<div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 2798px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+<script type="text/javascript">
+	var disqus_shortname = 'programwitherik';
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;</noscript></article>
+
+	</div>
+
+
+  <script src="./Ember 2.0 Example App With Firebase And Login Authentication_files/jquery-latest.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/widget.js"></script>
+  <script type="text/javascript" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/prism.js"></script>
+  <script src="./Ember 2.0 Example App With Firebase And Login Authentication_files/embed(1).js"></script>
+  <script>  
+  window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));  
+</script>  
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52060839-1', 'programwitherik.com');
+  ga('send', 'pageview');
+
+</script>
+<script src="./Ember 2.0 Example App With Firebase And Login Authentication_files/saved_resource" data-sumo-site-id="726f7c39c7a58c05066184207a9b801c125b9604e6d50fe872925ac8663dc501" async="async"></script>
+
+
+<iframe id="sumome-jquery-iframe" style="display: none;" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/saved_resource(2).html"></iframe><iframe style="display: none;" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/saved_resource(3).html"></iframe><a href="javascript:void(0);" title="Sumo" style="background-color: rgb(0, 115, 183); border-radius: 3px 0px 0px 3px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px; position: fixed; z-index: 2147483647; padding: 0px; width: 44px; height: 40px; text-indent: -10000px; opacity: 1; display: block !important; top: 40px; right: -40px;"><span style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; margin-left: 4px; margin-right: 0px; border-radius: 3px 0px 0px 3px;">Sumo</span><span style="display: block; width: 40px; height: 40px; background: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxZDQ2MjI4YS03NWY2LTRkZTQtOGJjYy1hODc1NjRkMjYxYTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDQ3MUVFMDFFMjVDMTFFNjlFQjhBRjdGODU5MDJBMDUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDQ3MUVFMDBFMjVDMTFFNjlFQjhBRjdGODU5MDJBMDUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxZDQ2MjI4YS03NWY2LTRkZTQtOGJjYy1hODc1NjRkMjYxYTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MWQ0NjIyOGEtNzVmNi00ZGU0LThiY2MtYTg3NTY0ZDI2MWE1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+8JtvywAAAKhQTFRFzOPxSJvLA3W4Mo7FBna5w97u8vj7EHy8a67VhbzdsdTpVaLPh73d9/v9C3m6QZfJbq/WXKbR3u32JIfB3ez1KorDir/eBHW4+/3+rtPoZarUG4K/LIvDDnu7ocvkf7nbdrTY9fr8E328WKPQO5PITJ3MPpXJstXptdbq+Pv9cbHXaq3VU6HOkMLgnMnjDHq62uv1/P3+6/T53Oz1cLDX/f7+AHO3////ptOZ5QAAADh0Uk5T/////////////////////////////////////////////////////////////////////////wA7XBHKAAAAmUlEQVR42sSRRxLCMAxFRSq9907ovebr/jdDMWYGxmZL3sIqbyFbJv4B/VlkVlerKALTD3G46Mx3AOR1UZ/TsDxW6W0gfYRNVfTCFu2AWpAMgMItMW+zQJU2UjWI29D0+e5KWNPMk+A9Om+B/UgOJyCuwMJCrpuziYkIsglfRByZ/XM3eXnBFEu1kpMpjq9dxQYp/OAXTwEGAB7Rc1xVnPemAAAAAElFTkSuQmCC&quot;) 8px 8px no-repeat white; margin-left: 4px; border-radius: 3px 0px 0px 3px; margin-right: 0px;"></span></a><iframe style="display: none;" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/saved_resource(4).html"></iframe><div style="position:fixed;top:0;left:0;overflow:hidden;"><label for="focus_retriever" style="position:absolute;left:-1000px;">Focus Retriever</label><input style="position:absolute;left:-1000px;" type="text" name="focus_retriever" value="" id="focus_retriever" readonly="true"></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Ember 2.0 Example App With Firebase And Login Authentication_files/saved_resource(5).html"></iframe></body></html>
